@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 020f0c3dbd741796acb63cbc2ed8ab9b57feb07c
+PODS:
+  - BackServices (0.0.1)
+
+DEPENDENCIES:
+  - BackServices (from `https://github.com/JosPerez/BackServices.git`, branch `main`)
+
+EXTERNAL SOURCES:
+  BackServices:
+    :branch: main
+    :git: https://github.com/JosPerez/BackServices.git
+
+CHECKOUT OPTIONS:
+  BackServices:
+    :commit: c96d1164e010204ee1cdf8b0262b92f6de9d18bf
+    :git: https://github.com/JosPerez/BackServices.git
+
+SPEC CHECKSUMS:
+  BackServices: 60ccf9ec0fa9e2695164e9969e2f5b713e42367e
+
+PODFILE CHECKSUM: 44c2930e68f20c4c8a27a5d72534538631726652
 
 COCOAPODS: 1.11.2
