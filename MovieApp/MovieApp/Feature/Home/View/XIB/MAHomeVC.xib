@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAHomeVC" customModule="MovieApp" customModuleProvider="target">
             <connections>
+                <outlet property="favoritePlaceholder" destination="xDP-vg-nAc" id="kOV-e0-R8t"/>
                 <outlet property="tableview" destination="oo0-eF-Zkr" id="zil-ej-Phz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="SZf-7N-K8E"/>
             </connections>
@@ -24,21 +25,54 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-vg-nAc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EcD-TD-DIl">
+                            <rect key="frame" x="145" y="331" width="124" height="123"/>
+                            <color key="tintColor" systemColor="systemGrayColor"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorite Shows Selected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGS-P0-phm">
+                            <rect key="frame" x="114" y="470.5" width="186" height="37"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                            <color key="textColor" systemColor="systemGrayColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="EcD-TD-DIl" firstAttribute="centerY" secondItem="xDP-vg-nAc" secondAttribute="centerY" constant="-16" id="3MY-ca-bZp"/>
+                        <constraint firstItem="EcD-TD-DIl" firstAttribute="height" secondItem="xDP-vg-nAc" secondAttribute="height" multiplier="0.15" id="AJV-ng-V5j"/>
+                        <constraint firstItem="EcD-TD-DIl" firstAttribute="centerX" secondItem="xDP-vg-nAc" secondAttribute="centerX" id="IP4-5i-zaJ"/>
+                        <constraint firstItem="YGS-P0-phm" firstAttribute="centerX" secondItem="xDP-vg-nAc" secondAttribute="centerX" id="KDM-V4-xLf"/>
+                        <constraint firstItem="YGS-P0-phm" firstAttribute="width" secondItem="EcD-TD-DIl" secondAttribute="width" multiplier="1.5" id="WnP-qZ-5vY"/>
+                        <constraint firstItem="EcD-TD-DIl" firstAttribute="width" secondItem="xDP-vg-nAc" secondAttribute="width" multiplier="0.3" id="jVB-3n-4MY"/>
+                        <constraint firstItem="YGS-P0-phm" firstAttribute="top" secondItem="EcD-TD-DIl" secondAttribute="bottom" constant="16" id="tHJ-en-oUb"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="oo0-eF-Zkr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8oL-T8-8OF"/>
+                <constraint firstItem="xDP-vg-nAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="B4H-2I-909"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xDP-vg-nAc" secondAttribute="bottom" id="H99-nY-RP9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oo0-eF-Zkr" secondAttribute="bottom" id="MW5-xG-WRz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xDP-vg-nAc" secondAttribute="trailing" id="dN5-dx-dxg"/>
                 <constraint firstItem="oo0-eF-Zkr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fg7-08-9AX"/>
                 <constraint firstItem="oo0-eF-Zkr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iF7-9k-Nv1"/>
+                <constraint firstItem="xDP-vg-nAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="m0U-5X-oEA"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

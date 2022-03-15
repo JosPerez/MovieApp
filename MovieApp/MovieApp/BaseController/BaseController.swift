@@ -11,23 +11,31 @@ class BaseController: UIViewController {
     let networkplacehoder: UIViewController = MANetworkPlaceholderVC()
     override func viewDidLoad() {
         super.viewDidLoad()
-        BSNetworkManager.shared.networkDelegate = self
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //BSNetworkManager.shared.start()
-        //networkStatusPlaceholder(status: BSNetworkManager.shared.networkStatus())
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        //BSNetworkManager.shared.cancel()
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    func showToast(message : String, font: UIFont, isError: Bool = false) {
+        let toastLabel = UILabel(frame: CGRect(x: 16, y: self.view.frame.size.height-150, width: self.view.frame.size.width-32, height: 40))
+        toastLabel.backgroundColor = isError ? .red : .green
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.numberOfLines = 0
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .transitionCurlUp, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
 }
 /// Extensión con la información de red
-extension BaseController: BSNetworkManagerDelegate {
+extension BaseController {
     /// Muestra el placeholder de falta de conexión
     private func showNetworkPlaceholder() {
         addChild(networkplacehoder)
@@ -42,12 +50,7 @@ extension BaseController: BSNetworkManagerDelegate {
         networkplacehoder.removeFromParent()
     }
     /// Muestra u ocualta el placeholder  de conectividad
-    private func networkStatusPlaceholder(status: Bool) {
-        DispatchQueue.main.async {
-            !status ? self.showNetworkPlaceholder() : self.removeNetworkPlaceholder()
-        }
-    }
-    func didNetworkChange(status: Bool) {
-        networkStatusPlaceholder(status: status)
+    func networkStatusPlaceholder(status: Bool) {
+        status ? self.showNetworkPlaceholder() : self.removeNetworkPlaceholder()
     }
 }

@@ -12,9 +12,16 @@ final class MATVShowDataSource {
     var title: String
     ///  URL para descargar la imagen.
     var imgUrl: String
-    public init (tvshow: BSTVShowsEntity) {
+    /// Variable que almacena si es favorita
+    var isFavorite: Bool
+    /// Entidad completa de tvshows.
+    var tvshowEntity: BSTVShowsEntity
+    ///
+    public init (tvshow: BSTVShowsEntity, isFavorite: Bool = false) {
         self.title = tvshow.name ?? "Default"
         self.imgUrl = tvshow.image?.medium ?? ""
+        self.isFavorite = isFavorite
+        self.tvshowEntity = tvshow
     }
 }
 /// Enumerdador de flujo
