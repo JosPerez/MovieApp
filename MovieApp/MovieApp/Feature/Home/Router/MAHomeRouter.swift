@@ -14,16 +14,18 @@ final class MAHomeRouter: MAHomeRouterProtocol {
     /// Interactor
     private var interactor: MAHomeInteractor
     /// Inicializador
-    init() {
+    init(flow: MAShowFlow) {
         self.view = MAHomeVC()
         self.presenter = MAHomePresenter()
         self.interactor = MAHomeInteractor()
         /// Configuración vista
         view.presenter = presenter
+        view.flow = flow
         /// Configuración presenter
         presenter.view = view
         presenter.router = self
         presenter.interactor = interactor
+        presenter.flow = flow
         /// Configuración interactor
         interactor.presenter = presenter
     }

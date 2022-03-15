@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let MAHome = MAHomeRouter()
-        window?.rootViewController = MAHome.view
+        let rootController =  MATabBarRouter.createTabBar()
+        window?.rootViewController = rootController
         window?.makeKeyAndVisible()
     }
 
