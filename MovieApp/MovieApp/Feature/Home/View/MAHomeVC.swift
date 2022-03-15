@@ -32,12 +32,15 @@ final class MAHomeVC: BaseController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
         if flow == .all {
             BSNetworkManager.shared.cancel()
         }
     }
+    
     ///  Clase que asigna valoresa vista
     private func setupView() {
+        self.hidesBottomBarWhenPushed = true
         self.navigationController?.setNavBarColor(.init(red: 102/255, green: 31/255, blue: 255/255, alpha: 1))
         self.title = flow.rawValue
     }
