@@ -28,6 +28,12 @@
 		07DFA12C27E021C200794952 /* MAImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA12B27E021C200794952 /* MAImageDownloader.swift */; };
 		07DFA12E27E025EC00794952 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA12D27E025EC00794952 /* UINavigationControllerExtension.swift */; };
 		07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA13027E02E9100794952 /* MATabBarRouter.swift */; };
+		07DFA13C27E10AA700794952 /* MATVShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA13B27E10AA700794952 /* MATVShowDetailVC.swift */; };
+		07DFA13E27E10AE700794952 /* MATVShowDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07DFA13D27E10AE700794952 /* MATVShowDetailVC.xib */; };
+		07DFA14027E1129500794952 /* MATVShowDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA13F27E1129500794952 /* MATVShowDetailRouter.swift */; };
+		07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14227E112AE00794952 /* MATVShowDetailProtocol.swift */; };
+		07DFA14627E112C500794952 /* MATVShowDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14527E112C500794952 /* MATVShowDetailPresenter.swift */; };
+		07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14827E112D900794952 /* MATVShowDetailInteractor.swift */; };
 		8902569034A1797312B18C60 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E76A4E36F4A3D127A97164 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,12 @@
 		07DFA12B27E021C200794952 /* MAImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAImageDownloader.swift; sourceTree = "<group>"; };
 		07DFA12D27E025EC00794952 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		07DFA13027E02E9100794952 /* MATabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATabBarRouter.swift; sourceTree = "<group>"; };
+		07DFA13B27E10AA700794952 /* MATVShowDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailVC.swift; sourceTree = "<group>"; };
+		07DFA13D27E10AE700794952 /* MATVShowDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MATVShowDetailVC.xib; sourceTree = "<group>"; };
+		07DFA13F27E1129500794952 /* MATVShowDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailRouter.swift; sourceTree = "<group>"; };
+		07DFA14227E112AE00794952 /* MATVShowDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailProtocol.swift; sourceTree = "<group>"; };
+		07DFA14527E112C500794952 /* MATVShowDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailPresenter.swift; sourceTree = "<group>"; };
+		07DFA14827E112D900794952 /* MATVShowDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailInteractor.swift; sourceTree = "<group>"; };
 		40E76A4E36F4A3D127A97164 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B015A40C3D15BD271F5AD30A /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		C284E8B03A30ED386DC82EF1 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 		073E5B7227CDD5D300770B84 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				07DFA13727E10A5F00794952 /* Detail */,
 				073E5B7A27CDE34100770B84 /* Home */,
 				073E5B7327CDD5FD00770B84 /* NetworkPlaceholder */,
 			);
@@ -296,6 +309,67 @@
 			path = BaseTabBar;
 			sourceTree = "<group>";
 		};
+		07DFA13727E10A5F00794952 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA14727E112C900794952 /* Interactor */,
+				07DFA14427E112B400794952 /* Presenter */,
+				07DFA14127E112A000794952 /* Protocol */,
+				07DFA13A27E10A7500794952 /* Router */,
+				07DFA13827E10A6700794952 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		07DFA13827E10A6700794952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA13927E10A6E00794952 /* XIB */,
+				07DFA13B27E10AA700794952 /* MATVShowDetailVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07DFA13927E10A6E00794952 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA13D27E10AE700794952 /* MATVShowDetailVC.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		07DFA13A27E10A7500794952 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA13F27E1129500794952 /* MATVShowDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		07DFA14127E112A000794952 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA14227E112AE00794952 /* MATVShowDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		07DFA14427E112B400794952 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA14527E112C500794952 /* MATVShowDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		07DFA14727E112C900794952 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				07DFA14827E112D900794952 /* MATVShowDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		E3A1D39E79929F553C581729 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +442,7 @@
 				073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */,
 				073E5B6627CDD46F00770B84 /* Assets.xcassets in Resources */,
 				073E5B8027CDE38A00770B84 /* MAHomeVC.xib in Resources */,
+				07DFA13E27E10AE700794952 /* MATVShowDetailVC.xib in Resources */,
 				073E5B7927CDD6F300770B84 /* MANetworkPlaceholderVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,8 +496,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */,
+				07DFA14027E1129500794952 /* MATVShowDetailRouter.swift in Sources */,
 				07DFA12C27E021C200794952 /* MAImageDownloader.swift in Sources */,
 				073E5B8527CDE56A00770B84 /* MAHomeProtocol.swift in Sources */,
+				07DFA13C27E10AA700794952 /* MATVShowDetailVC.swift in Sources */,
 				073E5B6127CDD46D00770B84 /* BaseController.swift in Sources */,
 				073E5B5D27CDD46D00770B84 /* AppDelegate.swift in Sources */,
 				073E5B8C27CDE6B300770B84 /* MAHomeInteractor.swift in Sources */,
@@ -430,8 +508,10 @@
 				073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */,
 				07DFA11F27E0092F00794952 /* MAHomeEntity.swift in Sources */,
 				073E5B9627CDF48B00770B84 /* MASplashScreen.swift in Sources */,
+				07DFA14627E112C500794952 /* MATVShowDetailPresenter.swift in Sources */,
 				073E5B7727CDD67600770B84 /* MANetworkPlaceholderVC.swift in Sources */,
 				07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */,
+				07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */,
 				073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */,
 				073E5B8227CDE39400770B84 /* MAHomeVC.swift in Sources */,
 				07DFA12227E00C0E00794952 /* MATVShowCell.swift in Sources */,
