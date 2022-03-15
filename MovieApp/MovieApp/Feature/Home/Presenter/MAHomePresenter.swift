@@ -24,6 +24,9 @@ final class MAHomePresenter: MAHomePresenterProtocol {
     func deleteFavorite(tvshow: BSTVShowsEntity) {
         interactor?.deleteFavorite(tvshow: tvshow)
     }
+    func showShowDetail(entity: MATVShowDataSource) {
+        router?.showShowDetail(entity: entity)
+    }
 }
 extension MAHomePresenter: MAHomeOutputInteractorProtocol {
     func responseSuccessTVShows(list: [BSTVShowsEntity]) {

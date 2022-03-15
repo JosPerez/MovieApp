@@ -51,8 +51,15 @@ protocol MAHomePresenterProtocol {
     /// Función que elimina información de programa favorito
     /// - Parameter tvshow: Información del programa de televisión.
     func deleteFavorite(tvshow: BSTVShowsEntity)
+    /// Función de mostrar los detalles del programa
+    ///  - Parameter entity: Entidad con información para pintar pantalla
+    func showShowDetail(entity: MATVShowDataSource)
 }
-protocol MAHomeRouterProtocol {}
+protocol MAHomeRouterProtocol {
+    /// Función de mostrar los detalles del programa
+    ///  - Parameter entity: Entidad con información para pintar pantalla
+    func showShowDetail(entity: MATVShowDataSource)
+}
 protocol MAHomeInputInteractorProtocol {
     /// Referencia del presenter
     var presenter: MAHomeOutputInteractorProtocol? { get }

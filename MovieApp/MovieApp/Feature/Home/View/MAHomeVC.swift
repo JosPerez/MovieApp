@@ -15,7 +15,6 @@ final class MAHomeVC: BaseController {
     @IBOutlet private weak var favoritePlaceholder: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         setupTableView()
         if flow == .all {
             BSNetworkManager.shared.networkDelegate = self
@@ -23,6 +22,7 @@ final class MAHomeVC: BaseController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupView()
         if flow == .all {
             BSNetworkManager.shared.start()
         } else {
@@ -66,6 +66,10 @@ extension MAHomeVC: UITableViewDelegate, UITableViewDataSource {
         let action = dataSource[indexPath.row].isFavorite ? deleteFavorite(row: indexPath.row) : addFavorite(row: indexPath.row)
         return UISwipeActionsConfiguration(actions: [action])
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.showShowDetail(entity: dataSource[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
     /// Configura la acción para guardar el favorito.
     ///  - Parameter row: Fila seleccioanda
     ///  - Returns: Acción configurada.
@@ -101,18 +105,6 @@ extension MAHomeVC: UITableViewDelegate, UITableViewDataSource {
                 self.dataSource.removeAll(where: {$0.tvshowEntity.id == id})
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    /// Configura la alerta para elimianar  el favorito.
-    ///  - Parameters
-    ///  - description: Descripción de la alerta
-    ///  - complation: Acción para complementar.
-    private func showMainAlert(description: String, complation: (() -> Void)?) {
-        let alert = UIAlertController(title: "Oops, something went wrong", message: description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: ({_ in
-            complation?()
-        })))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

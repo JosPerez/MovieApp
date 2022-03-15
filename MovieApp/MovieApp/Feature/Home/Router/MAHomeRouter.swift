@@ -29,4 +29,8 @@ final class MAHomeRouter: MAHomeRouterProtocol {
         /// Configuración interactor
         interactor.presenter = presenter
     }
+    func showShowDetail(entity: MATVShowDataSource) {
+        let router = MATVShowDetailRouter(entity: entity)
+        view.navigationController?.pushViewController(router.view, animated: true)
+    }
 }

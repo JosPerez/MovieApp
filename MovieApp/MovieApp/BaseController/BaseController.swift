@@ -15,6 +15,11 @@ class BaseController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    /// Muestra Toast con mensaje y color necesario
+    ///  - Parameters:
+    ///  - message: Mensajes a mostrar.
+    ///  - font: Tamaño de fuente
+    ///  - isError: Color para cuando es error.
     func showToast(message : String, font: UIFont, isError: Bool = false) {
         let toastLabel = UILabel(frame: CGRect(x: 16, y: self.view.frame.size.height-150, width: self.view.frame.size.width-32, height: 40))
         toastLabel.backgroundColor = isError ? .red : .green
@@ -32,6 +37,18 @@ class BaseController: UIViewController {
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()
         })
+    }
+    /// Configura la alerta para elimianar  el favorito.
+    ///  - Parameters
+    ///  - description: Descripción de la alerta
+    ///  - complation: Acción para complementar.
+    func showMainAlert(description: String, complation: (() -> Void)?) {
+        let alert = UIAlertController(title: "Oops, something went wrong", message: description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: ({_ in
+            complation?()
+        })))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 /// Extensión con la información de red
