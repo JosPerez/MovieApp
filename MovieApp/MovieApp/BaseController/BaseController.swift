@@ -15,12 +15,15 @@ class BaseController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        BSNetworkManager.shared.start()
-        networkStatusPlaceholder(status: BSNetworkManager.shared.networkStatus())
+        //BSNetworkManager.shared.start()
+        //networkStatusPlaceholder(status: BSNetworkManager.shared.networkStatus())
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        BSNetworkManager.shared.cancel()
+        //BSNetworkManager.shared.cancel()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 /// Extensión con la información de red
