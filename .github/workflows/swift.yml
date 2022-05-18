@@ -9,7 +9,7 @@ on:
       
 jobs:
   test:
-    runs-on: macOS-11
+    runs-on: macOS-lastest
 
     steps:
       - name: Branch Checkout
@@ -20,7 +20,7 @@ jobs:
         with:
          ruby-version: 2.7.2
         
-      - name: Run iOS Unit testing for SDK
-        run: |
-          set -o pipefail
-          fastlane test
+      - name: Bundle Install
+        run: bundle install
+      - name: Unit tests
+        run: bundle exec fastlane tests
