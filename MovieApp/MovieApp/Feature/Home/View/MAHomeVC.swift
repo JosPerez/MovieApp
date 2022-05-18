@@ -31,6 +31,7 @@ final class MAHomeVC: BaseController {
         
     }
     override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
         super.viewWillDisappear(animated)
         if flow == .all {
             BSNetworkManager.shared.cancel()
@@ -39,6 +40,7 @@ final class MAHomeVC: BaseController {
     
     ///  Clase que asigna valoresa vista
     private func setupView() {
+        self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.setNavBarColor(.init(red: 102/255, green: 31/255, blue: 255/255, alpha: 1))
         self.title = flow.rawValue
     }
