@@ -22,4 +22,4 @@ jobs:
       - name: Run iOS Unit testing for SDK
         run: |
           set -o pipefail
-          fastlane tests
+          fastlane test
