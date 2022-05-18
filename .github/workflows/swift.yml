@@ -9,7 +9,7 @@ on:
       
 jobs:
   test:
-    runs-on: macOS-lastest
+    runs-on: macOS-12
 
     steps:
       - name: Branch Checkout
@@ -22,5 +22,6 @@ jobs:
         
       - name: Bundle Install
         run: bundle install
+        
       - name: Unit tests
-        run: bundle exec fastlane tests
+        run: bundle exec fastlane test
