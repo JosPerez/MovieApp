@@ -9,7 +9,8 @@ on:
       
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: macOS-11
+
     steps:
       - name: Branch Checkout
         uses: actions/checkout@v3
