@@ -7,15 +7,20 @@
 
 import UIKit
 import BackServices
+
 final class MAHomeVC: BaseController {
     var presenter: MAHomePresenterProtocol?
     var dataSource: [MATVShowDataSource] = []
     var flow: MAShowFlow = .all
+    var parts: [Part] = Part.randomPartGeneration(count: 6)
+    //var parts: [Part] = [Part(quantity: 101, color: UIColor.brown),Part(quantity: 333, color: UIColor.red)]
     @IBOutlet private weak var tableview: UITableView!
     @IBOutlet private weak var favoritePlaceholder: UIView!
+    @IBOutlet private weak var circularView: RingView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        circularView.dataSource = self
         if flow == .all {
             BSNetworkManager.shared.networkDelegate = self
         }
@@ -160,5 +165,19 @@ extension MAHomeVC: BSNetworkManagerDelegate {
                 }
             }
         }
+    }
+}
+extension MAHomeVC: RingViewDataSource {
+    func ringView(_ ringView: RingView, labelsFor centerLabel: inout (up: UILabel, down: UILabel)) {
+        centerLabel.up.text = "Saldos de usuarios"
+        centerLabel.up.font = UIFont.boldSystemFont(ofSize: 18)
+        centerLabel.down.font = UIFont.systemFont(ofSize: 16)
+    }
+    func numberOfParts(in ringView: RingView) -> Int {
+        return parts.count
+    }
+
+    func ringView(_ ringView: RingView, partAt index: Int) -> Part {
+        return parts[index]
     }
 }

@@ -3,6 +3,6 @@ target 'MovieApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'BackServices', :git => "https://github.com/JosPerez/BackServices.git", :branch => "main"
+  pod 'BackServices', :path => "/Users/joseperez/Developer/Projects/swift/BackServices"
 
 end

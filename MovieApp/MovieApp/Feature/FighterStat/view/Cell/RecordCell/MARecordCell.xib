@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="l81-DY-nyU" customClass="MARecordCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l81-DY-nyU" id="roh-7z-rrR">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-ak-bfC">
+                        <rect key="frame" x="16" y="8" width="361" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="OgN-RR-NdA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-8p-fvd">
+                        <rect key="frame" x="16" y="32" width="361" height="68"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MoJ-8p-fvd" firstAttribute="top" secondItem="ksb-ak-bfC" secondAttribute="bottom" id="GjM-eS-uSA"/>
+                    <constraint firstAttribute="trailing" secondItem="MoJ-8p-fvd" secondAttribute="trailing" constant="16" id="duc-e5-pZX"/>
+                    <constraint firstAttribute="bottom" secondItem="MoJ-8p-fvd" secondAttribute="bottom" id="kbT-4R-YQZ"/>
+                    <constraint firstItem="MoJ-8p-fvd" firstAttribute="leading" secondItem="roh-7z-rrR" secondAttribute="leading" constant="16" id="lBg-Am-dxO"/>
+                    <constraint firstItem="ksb-ak-bfC" firstAttribute="top" secondItem="roh-7z-rrR" secondAttribute="top" constant="8" id="t9n-iT-ptP"/>
+                    <constraint firstAttribute="trailing" secondItem="ksb-ak-bfC" secondAttribute="trailing" constant="16" id="vnw-3U-P5h"/>
+                    <constraint firstItem="ksb-ak-bfC" firstAttribute="leading" secondItem="roh-7z-rrR" secondAttribute="leading" constant="16" id="zjI-Sd-Puy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="recordLbl" destination="MoJ-8p-fvd" id="xs1-vS-top"/>
+            </connections>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 0710AD3E298B3AEB002E670D /* SDKConfig.json */; };
+		0710AD4429933238002E670D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710AD4329933238002E670D /* UIColorExtension.swift */; };
+		0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */; };
 		073E5B5D27CDD46D00770B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5C27CDD46D00770B84 /* AppDelegate.swift */; };
 		073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */; };
 		073E5B6127CDD46D00770B84 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B6027CDD46D00770B84 /* BaseController.swift */; };
@@ -22,6 +25,25 @@
 		073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073E5B9327CDF2D600770B84 /* MASplashScreen.xib */; };
 		073E5B9627CDF48B00770B84 /* MASplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B9527CDF48B00770B84 /* MASplashScreen.swift */; };
 		07C1D1C428353C8000FA696B /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1D1C328353C8000FA696B /* MovieAppTests.swift */; };
+		07C7A63529B97C20005D46C2 /* MAFighterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63429B97C20005D46C2 /* MAFighterHomeVC.swift */; };
+		07C7A63729B97C60005D46C2 /* MAFighterHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A63629B97C60005D46C2 /* MAFighterHomeVC.xib */; };
+		07C7A63929B97CB7005D46C2 /* MAFighterHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63829B97CB7005D46C2 /* MAFighterHomeProtocol.swift */; };
+		07C7A63B29B97E16005D46C2 /* MAFighterHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63A29B97E16005D46C2 /* MAFighterHomePresenter.swift */; };
+		07C7A63D29B97E9C005D46C2 /* MAFighterHomeInterctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63C29B97E9C005D46C2 /* MAFighterHomeInterctor.swift */; };
+		07C7A63F29B97EFC005D46C2 /* MAFighterHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63E29B97EFC005D46C2 /* MAFighterHomeRouter.swift */; };
+		07C7A64929B990C2005D46C2 /* MAFighterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A64829B990C2005D46C2 /* MAFighterTableCell.xib */; };
+		07C7A64B29B990CC005D46C2 /* MAFighterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A64A29B990CC005D46C2 /* MAFighterTableCell.swift */; };
+		07C7A65B29B9B5FF005D46C2 /* MAFighterStatEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A64F29B9B5FF005D46C2 /* MAFighterStatEntity.swift */; };
+		07C7A65C29B9B5FF005D46C2 /* MAFighterStatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A65129B9B5FF005D46C2 /* MAFighterStatPresenter.swift */; };
+		07C7A65D29B9B5FF005D46C2 /* MAFighterStatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A65329B9B5FF005D46C2 /* MAFighterStatProtocol.swift */; };
+		07C7A65F29B9B5FF005D46C2 /* MAFighterStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A65629B9B5FF005D46C2 /* MAFighterStatVC.swift */; };
+		07C7A66029B9B5FF005D46C2 /* MAFighterStatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A65829B9B5FF005D46C2 /* MAFighterStatInteractor.swift */; };
+		07C7A66129B9B5FF005D46C2 /* MAFighterStatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A65A29B9B5FF005D46C2 /* MAFighterStatRouter.swift */; };
+		07C7A66329B9B6FA005D46C2 /* MAFighterStatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A66229B9B6FA005D46C2 /* MAFighterStatVC.xib */; };
+		07C7A66629B9C47E005D46C2 /* MAStatCircularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A66529B9C47E005D46C2 /* MAStatCircularCell.swift */; };
+		07C7A66829B9C544005D46C2 /* MAStatCircularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A66729B9C544005D46C2 /* MAStatCircularCell.xib */; };
+		07C7A66C29B9EFB1005D46C2 /* MARecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A66B29B9EFB1005D46C2 /* MARecordCell.swift */; };
+		07C7A66E29B9F01A005D46C2 /* MARecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A66D29B9F01A005D46C2 /* MARecordCell.xib */; };
 		07DFA11F27E0092F00794952 /* MAHomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA11E27E0092F00794952 /* MAHomeEntity.swift */; };
 		07DFA12227E00C0E00794952 /* MATVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA12127E00C0E00794952 /* MATVShowCell.swift */; };
 		07DFA12427E00C1900794952 /* MATVShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07DFA12327E00C1900794952 /* MATVShowCell.xib */; };
@@ -35,7 +57,7 @@
 		07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14227E112AE00794952 /* MATVShowDetailProtocol.swift */; };
 		07DFA14627E112C500794952 /* MATVShowDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14527E112C500794952 /* MATVShowDetailPresenter.swift */; };
 		07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFA14827E112D900794952 /* MATVShowDetailInteractor.swift */; };
-		E9F2B6657BD6809B08119FAA /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9350903072FC84AEECE63CAE /* Pods_MovieApp.framework */; };
+		B1A130ED897F0F9F76BE12C1 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600A5AE5D051C87828AEA695 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0710AD3E298B3AEB002E670D /* SDKConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SDKConfig.json; sourceTree = "<group>"; };
+		0710AD4329933238002E670D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGenderLayers.swift; sourceTree = "<group>"; };
 		073E5B5927CDD46D00770B84 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073E5B5C27CDD46D00770B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +92,25 @@
 		073E5B9527CDF48B00770B84 /* MASplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASplashScreen.swift; sourceTree = "<group>"; };
 		07C1D1C128353C8000FA696B /* MovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C1D1C328353C8000FA696B /* MovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppTests.swift; sourceTree = "<group>"; };
+		07C7A63429B97C20005D46C2 /* MAFighterHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomeVC.swift; sourceTree = "<group>"; };
+		07C7A63629B97C60005D46C2 /* MAFighterHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterHomeVC.xib; sourceTree = "<group>"; };
+		07C7A63829B97CB7005D46C2 /* MAFighterHomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomeProtocol.swift; sourceTree = "<group>"; };
+		07C7A63A29B97E16005D46C2 /* MAFighterHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomePresenter.swift; sourceTree = "<group>"; };
+		07C7A63C29B97E9C005D46C2 /* MAFighterHomeInterctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomeInterctor.swift; sourceTree = "<group>"; };
+		07C7A63E29B97EFC005D46C2 /* MAFighterHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomeRouter.swift; sourceTree = "<group>"; };
+		07C7A64829B990C2005D46C2 /* MAFighterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterTableCell.xib; sourceTree = "<group>"; };
+		07C7A64A29B990CC005D46C2 /* MAFighterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterTableCell.swift; sourceTree = "<group>"; };
+		07C7A64F29B9B5FF005D46C2 /* MAFighterStatEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatEntity.swift; sourceTree = "<group>"; };
+		07C7A65129B9B5FF005D46C2 /* MAFighterStatPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatPresenter.swift; sourceTree = "<group>"; };
+		07C7A65329B9B5FF005D46C2 /* MAFighterStatProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatProtocol.swift; sourceTree = "<group>"; };
+		07C7A65629B9B5FF005D46C2 /* MAFighterStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatVC.swift; sourceTree = "<group>"; };
+		07C7A65829B9B5FF005D46C2 /* MAFighterStatInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatInteractor.swift; sourceTree = "<group>"; };
+		07C7A65A29B9B5FF005D46C2 /* MAFighterStatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterStatRouter.swift; sourceTree = "<group>"; };
+		07C7A66229B9B6FA005D46C2 /* MAFighterStatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterStatVC.xib; sourceTree = "<group>"; };
+		07C7A66529B9C47E005D46C2 /* MAStatCircularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAStatCircularCell.swift; sourceTree = "<group>"; };
+		07C7A66729B9C544005D46C2 /* MAStatCircularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAStatCircularCell.xib; sourceTree = "<group>"; };
+		07C7A66B29B9EFB1005D46C2 /* MARecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MARecordCell.swift; sourceTree = "<group>"; };
+		07C7A66D29B9F01A005D46C2 /* MARecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MARecordCell.xib; sourceTree = "<group>"; };
 		07DFA11E27E0092F00794952 /* MAHomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAHomeEntity.swift; sourceTree = "<group>"; };
 		07DFA12127E00C0E00794952 /* MATVShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowCell.swift; sourceTree = "<group>"; };
 		07DFA12327E00C1900794952 /* MATVShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MATVShowCell.xib; sourceTree = "<group>"; };
@@ -80,9 +124,9 @@
 		07DFA14227E112AE00794952 /* MATVShowDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailProtocol.swift; sourceTree = "<group>"; };
 		07DFA14527E112C500794952 /* MATVShowDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailPresenter.swift; sourceTree = "<group>"; };
 		07DFA14827E112D900794952 /* MATVShowDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATVShowDetailInteractor.swift; sourceTree = "<group>"; };
-		4DAC7D8188FAE1DD788CFE81 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
-		9350903072FC84AEECE63CAE /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB5973E86BBF4AB02B86B2F6 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3D8A5198264262822D2EA178 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		600A5AE5D051C87828AEA695 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE42C368B0CB31C79DF16A0C /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F2B6657BD6809B08119FAA /* Pods_MovieApp.framework in Frameworks */,
+				B1A130ED897F0F9F76BE12C1 /* Pods_MovieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +151,8 @@
 		03AD5122883C6F93696526F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DB5973E86BBF4AB02B86B2F6 /* Pods-MovieApp.debug.xcconfig */,
-				4DAC7D8188FAE1DD788CFE81 /* Pods-MovieApp.release.xcconfig */,
+				3D8A5198264262822D2EA178 /* Pods-MovieApp.debug.xcconfig */,
+				BE42C368B0CB31C79DF16A0C /* Pods-MovieApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -120,7 +164,7 @@
 				07C1D1C228353C8000FA696B /* MovieAppTests */,
 				073E5B5A27CDD46D00770B84 /* Products */,
 				03AD5122883C6F93696526F9 /* Pods */,
-				77BD0BDB1B0FAD95AAA1FAFD /* Frameworks */,
+				2CE006A8CB7C98F49E3FA8D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +188,7 @@
 				073E5B7027CDD59F00770B84 /* Delegates */,
 				073E5B6527CDD46F00770B84 /* Assets.xcassets */,
 				073E5B6A27CDD46F00770B84 /* Info.plist */,
+				0710AD3E298B3AEB002E670D /* SDKConfig.json */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -169,6 +214,8 @@
 		073E5B7227CDD5D300770B84 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				07C7A64D29B9B5FF005D46C2 /* FighterStat */,
+				07C7A62C29B97B89005D46C2 /* FighterHome */,
 				07DFA13727E10A5F00794952 /* Detail */,
 				073E5B7A27CDE34100770B84 /* Home */,
 				073E5B7327CDD5FD00770B84 /* NetworkPlaceholder */,
@@ -297,6 +344,159 @@
 			path = MovieAppTests;
 			sourceTree = "<group>";
 		};
+		07C7A62C29B97B89005D46C2 /* FighterHome */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A63329B97BFB005D46C2 /* entity */,
+				07C7A63229B97BF2005D46C2 /* router */,
+				07C7A63129B97BD4005D46C2 /* protocol */,
+				07C7A63029B97BC8005D46C2 /* interactor */,
+				07C7A62E29B97BB1005D46C2 /* presenter */,
+				07C7A62D29B97BA4005D46C2 /* view */,
+			);
+			path = FighterHome;
+			sourceTree = "<group>";
+		};
+		07C7A62D29B97BA4005D46C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A64729B990A1005D46C2 /* Cell */,
+				07C7A63429B97C20005D46C2 /* MAFighterHomeVC.swift */,
+				07C7A63629B97C60005D46C2 /* MAFighterHomeVC.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		07C7A62E29B97BB1005D46C2 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A63A29B97E16005D46C2 /* MAFighterHomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		07C7A63029B97BC8005D46C2 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A63C29B97E9C005D46C2 /* MAFighterHomeInterctor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		07C7A63129B97BD4005D46C2 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A63829B97CB7005D46C2 /* MAFighterHomeProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		07C7A63229B97BF2005D46C2 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A63E29B97EFC005D46C2 /* MAFighterHomeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		07C7A63329B97BFB005D46C2 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		07C7A64729B990A1005D46C2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A64829B990C2005D46C2 /* MAFighterTableCell.xib */,
+				07C7A64A29B990CC005D46C2 /* MAFighterTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		07C7A64D29B9B5FF005D46C2 /* FighterStat */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A64E29B9B5FF005D46C2 /* entity */,
+				07C7A65029B9B5FF005D46C2 /* presenter */,
+				07C7A65229B9B5FF005D46C2 /* protocol */,
+				07C7A65429B9B5FF005D46C2 /* view */,
+				07C7A65729B9B5FF005D46C2 /* interactor */,
+				07C7A65929B9B5FF005D46C2 /* router */,
+			);
+			path = FighterStat;
+			sourceTree = "<group>";
+		};
+		07C7A64E29B9B5FF005D46C2 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A64F29B9B5FF005D46C2 /* MAFighterStatEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		07C7A65029B9B5FF005D46C2 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A65129B9B5FF005D46C2 /* MAFighterStatPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		07C7A65229B9B5FF005D46C2 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A65329B9B5FF005D46C2 /* MAFighterStatProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		07C7A65429B9B5FF005D46C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A66429B9C401005D46C2 /* Cell */,
+				07C7A65629B9B5FF005D46C2 /* MAFighterStatVC.swift */,
+				07C7A66229B9B6FA005D46C2 /* MAFighterStatVC.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		07C7A65729B9B5FF005D46C2 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A65829B9B5FF005D46C2 /* MAFighterStatInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		07C7A65929B9B5FF005D46C2 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A65A29B9B5FF005D46C2 /* MAFighterStatRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		07C7A66429B9C401005D46C2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A66929B9EF7A005D46C2 /* RecordCell */,
+				07C7A66529B9C47E005D46C2 /* MAStatCircularCell.swift */,
+				07C7A66729B9C544005D46C2 /* MAStatCircularCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		07C7A66929B9EF7A005D46C2 /* RecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				07C7A66B29B9EFB1005D46C2 /* MARecordCell.swift */,
+				07C7A66D29B9F01A005D46C2 /* MARecordCell.xib */,
+			);
+			path = RecordCell;
+			sourceTree = "<group>";
+		};
 		07DFA11D27E0091400794952 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +519,7 @@
 			children = (
 				07DFA12827E0166600794952 /* UIImageViewExtension.swift */,
 				07DFA12D27E025EC00794952 /* UINavigationControllerExtension.swift */,
+				0710AD4329933238002E670D /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				07DFA12B27E021C200794952 /* MAImageDownloader.swift */,
+				0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -400,10 +602,10 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		77BD0BDB1B0FAD95AAA1FAFD /* Frameworks */ = {
+		2CE006A8CB7C98F49E3FA8D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9350903072FC84AEECE63CAE /* Pods_MovieApp.framework */,
+				600A5AE5D051C87828AEA695 /* Pods_MovieApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -415,11 +617,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 073E5B6D27CDD46F00770B84 /* Build configuration list for PBXNativeTarget "MovieApp" */;
 			buildPhases = (
-				89786838F3952B6F3B4FC18E /* [CP] Check Pods Manifest.lock */,
+				88DE0F658785AE754065FDD7 /* [CP] Check Pods Manifest.lock */,
 				073E5B5527CDD46D00770B84 /* Sources */,
 				073E5B5627CDD46D00770B84 /* Frameworks */,
 				073E5B5727CDD46D00770B84 /* Resources */,
-				0DDD1427BC738EE765C98624 /* [CP] Embed Pods Frameworks */,
+				8A3F3D6D7A7DD3A52C5EC790 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,11 +693,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C7A66329B9B6FA005D46C2 /* MAFighterStatVC.xib in Resources */,
+				07C7A64929B990C2005D46C2 /* MAFighterTableCell.xib in Resources */,
 				07DFA12427E00C1900794952 /* MATVShowCell.xib in Resources */,
 				073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */,
 				073E5B6627CDD46F00770B84 /* Assets.xcassets in Resources */,
 				073E5B8027CDE38A00770B84 /* MAHomeVC.xib in Resources */,
+				07C7A66E29B9F01A005D46C2 /* MARecordCell.xib in Resources */,
 				07DFA13E27E10AE700794952 /* MATVShowDetailVC.xib in Resources */,
+				07C7A66829B9C544005D46C2 /* MAStatCircularCell.xib in Resources */,
+				07C7A63729B97C60005D46C2 /* MAFighterHomeVC.xib in Resources */,
+				0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */,
 				073E5B7927CDD6F300770B84 /* MANetworkPlaceholderVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,24 +718,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DDD1427BC738EE765C98624 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89786838F3952B6F3B4FC18E /* [CP] Check Pods Manifest.lock */ = {
+		88DE0F658785AE754065FDD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -549,6 +740,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8A3F3D6D7A7DD3A52C5EC790 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -556,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C7A65C29B9B5FF005D46C2 /* MAFighterStatPresenter.swift in Sources */,
 				07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */,
 				07DFA14027E1129500794952 /* MATVShowDetailRouter.swift in Sources */,
 				07DFA12C27E021C200794952 /* MAImageDownloader.swift in Sources */,
@@ -564,18 +773,33 @@
 				073E5B6127CDD46D00770B84 /* BaseController.swift in Sources */,
 				073E5B5D27CDD46D00770B84 /* AppDelegate.swift in Sources */,
 				073E5B8C27CDE6B300770B84 /* MAHomeInteractor.swift in Sources */,
+				07C7A63929B97CB7005D46C2 /* MAFighterHomeProtocol.swift in Sources */,
+				07C7A66129B9B5FF005D46C2 /* MAFighterStatRouter.swift in Sources */,
+				0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */,
+				07C7A66629B9C47E005D46C2 /* MAStatCircularCell.swift in Sources */,
 				07DFA12E27E025EC00794952 /* UINavigationControllerExtension.swift in Sources */,
 				073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */,
+				07C7A66C29B9EFB1005D46C2 /* MARecordCell.swift in Sources */,
 				07DFA11F27E0092F00794952 /* MAHomeEntity.swift in Sources */,
 				073E5B9627CDF48B00770B84 /* MASplashScreen.swift in Sources */,
 				07DFA14627E112C500794952 /* MATVShowDetailPresenter.swift in Sources */,
+				07C7A65B29B9B5FF005D46C2 /* MAFighterStatEntity.swift in Sources */,
+				07C7A63529B97C20005D46C2 /* MAFighterHomeVC.swift in Sources */,
 				073E5B7727CDD67600770B84 /* MANetworkPlaceholderVC.swift in Sources */,
 				07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */,
 				07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */,
 				073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */,
 				073E5B8227CDE39400770B84 /* MAHomeVC.swift in Sources */,
 				07DFA12227E00C0E00794952 /* MATVShowCell.swift in Sources */,
+				0710AD4429933238002E670D /* UIColorExtension.swift in Sources */,
+				07C7A63F29B97EFC005D46C2 /* MAFighterHomeRouter.swift in Sources */,
+				07C7A66029B9B5FF005D46C2 /* MAFighterStatInteractor.swift in Sources */,
 				07DFA12927E0166600794952 /* UIImageViewExtension.swift in Sources */,
+				07C7A63D29B97E9C005D46C2 /* MAFighterHomeInterctor.swift in Sources */,
+				07C7A63B29B97E16005D46C2 /* MAFighterHomePresenter.swift in Sources */,
+				07C7A65F29B9B5FF005D46C2 /* MAFighterStatVC.swift in Sources */,
+				07C7A64B29B990CC005D46C2 /* MAFighterTableCell.swift in Sources */,
+				07C7A65D29B9B5FF005D46C2 /* MAFighterStatProtocol.swift in Sources */,
 				073E5B8927CDE64A00770B84 /* MAHomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +941,7 @@
 		};
 		073E5B6E27CDD46F00770B84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB5973E86BBF4AB02B86B2F6 /* Pods-MovieApp.debug.xcconfig */;
+			baseConfigurationReference = 3D8A5198264262822D2EA178 /* Pods-MovieApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -746,7 +970,7 @@
 		};
 		073E5B6F27CDD46F00770B84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DAC7D8188FAE1DD788CFE81 /* Pods-MovieApp.release.xcconfig */;
+			baseConfigurationReference = BE42C368B0CB31C79DF16A0C /* Pods-MovieApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

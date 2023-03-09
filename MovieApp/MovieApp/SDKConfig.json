@@ -1,0 +1,37 @@
+{
+    "front_id": "",
+    "application_id": "",
+    "idc_private": "",
+    "urls_stp": [
+        "https://us-central1-stpcodig.cloudfunctions.net/codiRest/",
+        "https://efws-dev.stpmex.com/api",
+        "https://sintb3.codi.org.mx/bcodi-"
+    ],
+    "urls_banxico": [
+        "https://us-central1-stpcodig.cloudfunctions.net/codiRest/",
+        "https://efws-dev.stpmex.com/api",
+        "https://sintb3.codi.org.mx/bcodi-"
+    ],
+    "stpFirebaseProject": [
+        {
+            "googleId": "",
+            "apiKey": "",
+            "projectId": "",
+            "iOSID": ""
+        }
+    ],
+    "banxicoFirebaseProjects": [
+       {
+            "googleId": "",
+            "apiKey": "",
+            "projectId": "",
+            "iOSID": ""
+        },
+        {
+            "googleId": "",
+            "apiKey": "",
+            "projectId": "",
+            "iOSID": ""
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAHomeVC" customModule="MovieApp" customModuleProvider="target">
             <connections>
-                <outlet property="favoritePlaceholder" destination="xDP-vg-nAc" id="kOV-e0-R8t"/>
+                <outlet property="circularView" destination="Kna-hv-2xq" id="ZWs-mN-ruy"/>
+                <outlet property="favoritePlaceholder" destination="xDP-vg-nAc" id="kdf-t9-COk"/>
                 <outlet property="tableview" destination="oo0-eF-Zkr" id="zil-ej-Phz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="SZf-7N-K8E"/>
             </connections>
@@ -22,18 +23,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oo0-eF-Zkr">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="317" width="414" height="545"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kna-hv-2xq" customClass="RingView" customModule="BackServices">
+                    <rect key="frame" x="0.0" y="48" width="414" height="269"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-vg-nAc">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EcD-TD-DIl">
-                            <rect key="frame" x="145" y="331" width="124" height="123"/>
+                            <rect key="frame" x="145" y="329.5" width="124" height="122"/>
                             <color key="tintColor" systemColor="systemGrayColor"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorite Shows Selected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGS-P0-phm">
-                            <rect key="frame" x="114" y="470.5" width="186" height="37"/>
+                            <rect key="frame" x="114" y="468" width="186" height="37"/>
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
@@ -54,14 +59,19 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="oo0-eF-Zkr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8oL-T8-8OF"/>
                 <constraint firstItem="xDP-vg-nAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="B4H-2I-909"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xDP-vg-nAc" secondAttribute="bottom" id="H99-nY-RP9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kna-hv-2xq" secondAttribute="trailing" id="HOO-SV-JQq"/>
+                <constraint firstItem="oo0-eF-Zkr" firstAttribute="top" secondItem="Kna-hv-2xq" secondAttribute="bottom" id="Kse-oi-mR5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oo0-eF-Zkr" secondAttribute="bottom" id="MW5-xG-WRz"/>
+                <constraint firstItem="Kna-hv-2xq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="TTj-8N-RZc"/>
+                <constraint firstItem="Kna-hv-2xq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XyN-wj-MBQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xDP-vg-nAc" secondAttribute="trailing" id="dN5-dx-dxg"/>
                 <constraint firstItem="oo0-eF-Zkr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fg7-08-9AX"/>
                 <constraint firstItem="oo0-eF-Zkr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iF7-9k-Nv1"/>
+                <constraint firstItem="Kna-hv-2xq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jBc-rn-2Ej"/>
                 <constraint firstItem="xDP-vg-nAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="m0U-5X-oEA"/>
+                <constraint firstItem="xDP-vg-nAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yhh-Ea-8P1"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </view>

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let rootController =  MATabBarRouter.createTabBar()
+        let rootController = UINavigationController(rootViewController: MAFighterHomeRouter.createView())
         window?.rootViewController = rootController
         window?.makeKeyAndVisible()
     }

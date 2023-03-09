@@ -6,6 +6,10 @@
 //
 import UIKit
 import BackServices
+protocol BaseControllerProtocol {
+    func showToast(message : String, font: UIFont, isError: Bool)
+    func showMainAlert(description: String, complation: (() -> Void)?)
+}
 class BaseController: UIViewController {
     /// Placeholder de  conectividad
     let networkplacehoder: UIViewController = MANetworkPlaceholderVC()

@@ -2,21 +2,15 @@ PODS:
   - BackServices (0.0.1)
 
 DEPENDENCIES:
-  - BackServices (from `https://github.com/JosPerez/BackServices.git`, branch `main`)
+  - BackServices (from `/Users/joseperez/Developer/Projects/swift/BackServices`)
 
 EXTERNAL SOURCES:
   BackServices:
-    :branch: main
-    :git: https://github.com/JosPerez/BackServices.git
-
-CHECKOUT OPTIONS:
-  BackServices:
-    :commit: cf81255a3af2078d4fe401ec9ff3288427e834c8
-    :git: https://github.com/JosPerez/BackServices.git
+    :path: "/Users/joseperez/Developer/Projects/swift/BackServices"
 
 SPEC CHECKSUMS:
   BackServices: 60ccf9ec0fa9e2695164e9969e2f5b713e42367e
 
-PODFILE CHECKSUM: 4e21ce4a5db4df920caf31d9852048124b737a44
+PODFILE CHECKSUM: caa9e3909f9336da55072023d0fa8b04b223c8c6
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
