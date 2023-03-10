@@ -19,7 +19,7 @@ final class MAStatCircularCell: UITableViewCell {
         let partLanded = Part(quantity: Double(landed), color: .green, name: "\(type.rawValue) Landed")
         let partThrowed = Part(quantity: Double(throwed), color: .red, name: "\(type.rawValue) Thrown")
         parts = [partLanded,partThrowed]
-        circularView.ringWidth = 12
+        circularView.ringWidth = 14
         circularView.dataSource = self
         landedLbl.text = "\(type.rawValue) Landed:\n\(landed)"
         colorLandedView.backgroundColor = .green

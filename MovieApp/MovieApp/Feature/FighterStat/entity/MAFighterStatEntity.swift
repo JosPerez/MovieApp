@@ -10,9 +10,19 @@ enum MAStatType: String{
 }
 struct MAStasBase {
     enum EntityType {
-        case record(String)
+        case record(String, String)
         case circularGraph(Int, Int, MAStatType)
+        case ThreeStatGraph(MAThreeStatGraph)
     }
     var name: String
     var type: EntityType
+}
+struct MAThreeStatGraph {
+    var seccionTitle: String
+    var title: [String]
+    var values: [MADetailStat]
+}
+struct MADetailStat {
+    var percentage: String
+    var quantity: String
 }

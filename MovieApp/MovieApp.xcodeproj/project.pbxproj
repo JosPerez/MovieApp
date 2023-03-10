@@ -10,6 +10,8 @@
 		0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 0710AD3E298B3AEB002E670D /* SDKConfig.json */; };
 		0710AD4429933238002E670D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710AD4329933238002E670D /* UIColorExtension.swift */; };
 		0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */; };
+		0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */; };
+		0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */; };
 		073E5B5D27CDD46D00770B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5C27CDD46D00770B84 /* AppDelegate.swift */; };
 		073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */; };
 		073E5B6127CDD46D00770B84 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B6027CDD46D00770B84 /* BaseController.swift */; };
@@ -74,6 +76,8 @@
 		0710AD3E298B3AEB002E670D /* SDKConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SDKConfig.json; sourceTree = "<group>"; };
 		0710AD4329933238002E670D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGenderLayers.swift; sourceTree = "<group>"; };
+		0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAThreeStatGraphCell.swift; sourceTree = "<group>"; };
+		0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAThreeStatGraphCell.xib; sourceTree = "<group>"; };
 		073E5B5927CDD46D00770B84 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073E5B5C27CDD46D00770B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +159,15 @@
 				BE42C368B0CB31C79DF16A0C /* Pods-MovieApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		0739FFDC29BACDCA00991E79 /* ThreeStatCell */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */,
+				0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */,
+			);
+			path = ThreeStatCell;
 			sourceTree = "<group>";
 		};
 		073E5B5027CDD46D00770B84 = {
@@ -481,6 +494,7 @@
 		07C7A66429B9C401005D46C2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0739FFDC29BACDCA00991E79 /* ThreeStatCell */,
 				07C7A66929B9EF7A005D46C2 /* RecordCell */,
 				07C7A66529B9C47E005D46C2 /* MAStatCircularCell.swift */,
 				07C7A66729B9C544005D46C2 /* MAStatCircularCell.xib */,
@@ -699,6 +713,7 @@
 				073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */,
 				073E5B6627CDD46F00770B84 /* Assets.xcassets in Resources */,
 				073E5B8027CDE38A00770B84 /* MAHomeVC.xib in Resources */,
+				0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */,
 				07C7A66E29B9F01A005D46C2 /* MARecordCell.xib in Resources */,
 				07DFA13E27E10AE700794952 /* MATVShowDetailVC.xib in Resources */,
 				07C7A66829B9C544005D46C2 /* MAStatCircularCell.xib in Resources */,
@@ -765,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C7A65C29B9B5FF005D46C2 /* MAFighterStatPresenter.swift in Sources */,
+				0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */,
 				07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */,
 				07DFA14027E1129500794952 /* MATVShowDetailRouter.swift in Sources */,
 				07DFA12C27E021C200794952 /* MAImageDownloader.swift in Sources */,

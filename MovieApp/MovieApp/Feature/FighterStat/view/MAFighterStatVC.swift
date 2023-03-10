@@ -27,7 +27,7 @@ final class MAFighterStatVC: BaseController {
         self.fighterTableView.separatorStyle = .none
         self.fighterTableView.register(UINib(nibName: "MAStatCircularCell", bundle: Bundle.main), forCellReuseIdentifier: "MAStatCircularCell")
         self.fighterTableView.register(UINib(nibName: "MARecordCell", bundle: Bundle.main), forCellReuseIdentifier: "MARecordCell")
-
+        self.fighterTableView.register(UINib(nibName: "MAThreeStatGraphCell", bundle: Bundle.main), forCellReuseIdentifier: "MAThreeStatGraphCell")
     }
 
 }
@@ -36,19 +36,24 @@ extension MAFighterStatVC: UITableViewDelegate, UITableViewDataSource {
         return self.presenter?.dataSource?.count ?? 0
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 80 : 160
+        return indexPath.row == 0 ? 160 : 160
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let current = self.presenter?.dataSource?[indexPath.row] {
             switch current.type {
-            case .record(let record):
+            case .record(let record, let avgFight):
                 if  let cell = fighterTableView.dequeueReusableCell(withIdentifier: "MARecordCell", for: indexPath) as? MARecordCell {
-                    cell.setupCell(record: record)
+                    cell.setupCell(record: record, avgFightTime: avgFight)
                     return cell
                 }
             case .circularGraph(let landed, let throwed, let type):
                 if  let cell = fighterTableView.dequeueReusableCell(withIdentifier: "MAStatCircularCell", for: indexPath) as? MAStatCircularCell {
                     cell.setupCell(landed: landed, throwed: throwed, type: type)
+                    return cell
+                }
+            case .ThreeStatGraph(let entity):
+                if  let cell = fighterTableView.dequeueReusableCell(withIdentifier: "MAThreeStatGraphCell", for: indexPath) as? MAThreeStatGraphCell {
+                    cell.setupCell(entity: entity)
                     return cell
                 }
             }
