@@ -26,4 +26,8 @@ final class MAFighterStatRouter: MAFighterStatRouterProtocol {
         router.presenter = presenter
         return view
     }
+    func showFights(entity: BSFighterHistory) {
+        let vc = MAFighterHistoryRouter.createView(fighterName: self.view?.fighterName ?? "Fights", entity: entity)
+        self.view?.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -12,6 +12,14 @@
 		0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */; };
 		0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */; };
 		0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */; };
+		0739FFED29BBFE7F00991E79 /* MAFighterHistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFE429BBFE7F00991E79 /* MAFighterHistoryEntity.swift */; };
+		0739FFEE29BBFE7F00991E79 /* MAFighterHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFE629BBFE7F00991E79 /* MAFighterHistoryPresenter.swift */; };
+		0739FFEF29BBFE7F00991E79 /* MAFighterHistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFE829BBFE7F00991E79 /* MAFighterHistoryProtocol.swift */; };
+		0739FFF029BBFE7F00991E79 /* MAFighterHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFEA29BBFE7F00991E79 /* MAFighterHistoryVC.swift */; };
+		0739FFF129BBFE7F00991E79 /* MAFighterHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFEC29BBFE7F00991E79 /* MAFighterHistoryRouter.swift */; };
+		0739FFF329BBFEAB00991E79 /* MAFighterHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFF229BBFEAB00991E79 /* MAFighterHistoryVC.xib */; };
+		0739FFF629BC01B300991E79 /* MAFighterFightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFF529BC01B300991E79 /* MAFighterFightCell.xib */; };
+		0739FFF829BC01C300991E79 /* MAFighterFightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFF729BC01C300991E79 /* MAFighterFightCell.swift */; };
 		073E5B5D27CDD46D00770B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5C27CDD46D00770B84 /* AppDelegate.swift */; };
 		073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */; };
 		073E5B6127CDD46D00770B84 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B6027CDD46D00770B84 /* BaseController.swift */; };
@@ -78,6 +86,14 @@
 		0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGenderLayers.swift; sourceTree = "<group>"; };
 		0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAThreeStatGraphCell.swift; sourceTree = "<group>"; };
 		0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAThreeStatGraphCell.xib; sourceTree = "<group>"; };
+		0739FFE429BBFE7F00991E79 /* MAFighterHistoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterHistoryEntity.swift; sourceTree = "<group>"; };
+		0739FFE629BBFE7F00991E79 /* MAFighterHistoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterHistoryPresenter.swift; sourceTree = "<group>"; };
+		0739FFE829BBFE7F00991E79 /* MAFighterHistoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterHistoryProtocol.swift; sourceTree = "<group>"; };
+		0739FFEA29BBFE7F00991E79 /* MAFighterHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterHistoryVC.swift; sourceTree = "<group>"; };
+		0739FFEC29BBFE7F00991E79 /* MAFighterHistoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterHistoryRouter.swift; sourceTree = "<group>"; };
+		0739FFF229BBFEAB00991E79 /* MAFighterHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterHistoryVC.xib; sourceTree = "<group>"; };
+		0739FFF529BC01B300991E79 /* MAFighterFightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterFightCell.xib; sourceTree = "<group>"; };
+		0739FFF729BC01C300991E79 /* MAFighterFightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterFightCell.swift; sourceTree = "<group>"; };
 		073E5B5927CDD46D00770B84 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073E5B5C27CDD46D00770B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073E5B5E27CDD46D00770B84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +186,69 @@
 			path = ThreeStatCell;
 			sourceTree = "<group>";
 		};
+		0739FFE229BBFE7F00991E79 /* FighterHistory */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFE329BBFE7F00991E79 /* entity */,
+				0739FFE529BBFE7F00991E79 /* presenter */,
+				0739FFE729BBFE7F00991E79 /* protocol */,
+				0739FFE929BBFE7F00991E79 /* view */,
+				0739FFEB29BBFE7F00991E79 /* router */,
+			);
+			path = FighterHistory;
+			sourceTree = "<group>";
+		};
+		0739FFE329BBFE7F00991E79 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFE429BBFE7F00991E79 /* MAFighterHistoryEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		0739FFE529BBFE7F00991E79 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFE629BBFE7F00991E79 /* MAFighterHistoryPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		0739FFE729BBFE7F00991E79 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFE829BBFE7F00991E79 /* MAFighterHistoryProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		0739FFE929BBFE7F00991E79 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFF429BC019B00991E79 /* Cell */,
+				0739FFEA29BBFE7F00991E79 /* MAFighterHistoryVC.swift */,
+				0739FFF229BBFEAB00991E79 /* MAFighterHistoryVC.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0739FFEB29BBFE7F00991E79 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFEC29BBFE7F00991E79 /* MAFighterHistoryRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		0739FFF429BC019B00991E79 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0739FFF529BC01B300991E79 /* MAFighterFightCell.xib */,
+				0739FFF729BC01C300991E79 /* MAFighterFightCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		073E5B5027CDD46D00770B84 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +306,7 @@
 		073E5B7227CDD5D300770B84 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				0739FFE229BBFE7F00991E79 /* FighterHistory */,
 				07C7A64D29B9B5FF005D46C2 /* FighterStat */,
 				07C7A62C29B97B89005D46C2 /* FighterHome */,
 				07DFA13727E10A5F00794952 /* Detail */,
@@ -707,11 +787,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0739FFF329BBFEAB00991E79 /* MAFighterHistoryVC.xib in Resources */,
 				07C7A66329B9B6FA005D46C2 /* MAFighterStatVC.xib in Resources */,
 				07C7A64929B990C2005D46C2 /* MAFighterTableCell.xib in Resources */,
 				07DFA12427E00C1900794952 /* MATVShowCell.xib in Resources */,
 				073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */,
 				073E5B6627CDD46F00770B84 /* Assets.xcassets in Resources */,
+				0739FFF629BC01B300991E79 /* MAFighterFightCell.xib in Resources */,
 				073E5B8027CDE38A00770B84 /* MAHomeVC.xib in Resources */,
 				0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */,
 				07C7A66E29B9F01A005D46C2 /* MARecordCell.xib in Resources */,
@@ -798,20 +880,26 @@
 				07C7A66C29B9EFB1005D46C2 /* MARecordCell.swift in Sources */,
 				07DFA11F27E0092F00794952 /* MAHomeEntity.swift in Sources */,
 				073E5B9627CDF48B00770B84 /* MASplashScreen.swift in Sources */,
+				0739FFEE29BBFE7F00991E79 /* MAFighterHistoryPresenter.swift in Sources */,
 				07DFA14627E112C500794952 /* MATVShowDetailPresenter.swift in Sources */,
 				07C7A65B29B9B5FF005D46C2 /* MAFighterStatEntity.swift in Sources */,
 				07C7A63529B97C20005D46C2 /* MAFighterHomeVC.swift in Sources */,
+				0739FFF129BBFE7F00991E79 /* MAFighterHistoryRouter.swift in Sources */,
 				073E5B7727CDD67600770B84 /* MANetworkPlaceholderVC.swift in Sources */,
+				0739FFED29BBFE7F00991E79 /* MAFighterHistoryEntity.swift in Sources */,
 				07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */,
 				07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */,
+				0739FFF829BC01C300991E79 /* MAFighterFightCell.swift in Sources */,
 				073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */,
 				073E5B8227CDE39400770B84 /* MAHomeVC.swift in Sources */,
 				07DFA12227E00C0E00794952 /* MATVShowCell.swift in Sources */,
 				0710AD4429933238002E670D /* UIColorExtension.swift in Sources */,
 				07C7A63F29B97EFC005D46C2 /* MAFighterHomeRouter.swift in Sources */,
 				07C7A66029B9B5FF005D46C2 /* MAFighterStatInteractor.swift in Sources */,
+				0739FFF029BBFE7F00991E79 /* MAFighterHistoryVC.swift in Sources */,
 				07DFA12927E0166600794952 /* UIImageViewExtension.swift in Sources */,
 				07C7A63D29B97E9C005D46C2 /* MAFighterHomeInterctor.swift in Sources */,
+				0739FFEF29BBFE7F00991E79 /* MAFighterHistoryProtocol.swift in Sources */,
 				07C7A63B29B97E16005D46C2 /* MAFighterHomePresenter.swift in Sources */,
 				07C7A65F29B9B5FF005D46C2 /* MAFighterStatVC.swift in Sources */,
 				07C7A64B29B990CC005D46C2 /* MAFighterTableCell.swift in Sources */,

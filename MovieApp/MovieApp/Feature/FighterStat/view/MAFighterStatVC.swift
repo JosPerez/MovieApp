@@ -9,17 +9,22 @@ import BackServices
 final class MAFighterStatVC: BaseController {
     var presenter: MAFighterStatPresenterProtocol?
     var fighterName: String?
+    var firstLoad:Bool = true
     @IBOutlet weak var fighterTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         BSNetworkManager.shared.networkDelegate = self
-        self.title = self.fighterName
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.title = self.fighterName
         BSNetworkManager.shared.start()
         self.presenter?.setupDataSource()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
     }
     func setupTableView() {
         self.fighterTableView.delegate = self
@@ -36,7 +41,17 @@ extension MAFighterStatVC: UITableViewDelegate, UITableViewDataSource {
         return self.presenter?.dataSource?.count ?? 0
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 160 : 160
+        if let entity = self.presenter?.dataSource?[indexPath.row].type {
+            switch entity {
+            case .circularGraph:
+                return 220.0
+            case .ThreeStatGraph:
+                return 164.0
+            default:
+                return 160.0
+            }
+        }
+        return 0.0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let current = self.presenter?.dataSource?[indexPath.row] {
@@ -61,13 +76,24 @@ extension MAFighterStatVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
 }
-extension MAFighterStatVC: MAFighterStatViewProtocol {
+extension MAFighterStatVC: MAFighterStatViewProtocol {    
+    @objc func showFightsObj() {
+        self.presenter?.showFights()
+    }
     func setupDataSourceSuccess() {
         self.fighterTableView.reloadData()
+    }
+    func responseFightsSuccess() {
+        let barButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showFightsObj))
+        navigationItem.rightBarButtonItem = barButton
     }
 }
 extension MAFighterStatVC: BSNetworkManagerDelegate {
     func didNetworkChange(status: Bool) {
         print("Internet status:",status)
+        if firstLoad, let id = self.presenter?.entity?.fighterId {
+            firstLoad = false
+            self.presenter?.getFightsBy(id: id)
+        }
     }
 }

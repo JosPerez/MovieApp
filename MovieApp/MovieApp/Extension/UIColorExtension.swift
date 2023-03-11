@@ -9,6 +9,7 @@ import UIKit
 import BackServices
 
 extension UIColor {
+    static var militaryGreen = UIColor(red: 0.0/255.0, green: 128.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     static func randomColor() -> UIColor {
         let red = CGFloat.random(in: 0...1)
         let green = CGFloat.random(in: 0...1)

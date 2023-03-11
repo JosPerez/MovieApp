@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAFighterHomeVC" customModule="MovieApp" customModuleProvider="target">
             <connections>
                 <outlet property="fighterTableView" destination="Pe6-1N-kl4" id="i18-4R-qvK"/>
+                <outlet property="segmentGender" destination="VMd-oL-Ytf" id="pvQ-kn-kTR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="vky-eg-sGG"/>
             </connections>
         </placeholder>
@@ -21,19 +22,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-1N-kl4">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="98" width="393" height="754"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-oL-Ytf">
+                    <rect key="frame" x="0.0" y="67" width="393" height="32"/>
+                    <segments>
+                        <segment title="ALL"/>
+                        <segment title="MEN"/>
+                        <segment title="WOMEN"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentChage:" destination="-1" eventType="valueChanged" id="uiL-1v-F5s"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="VMd-oL-Ytf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6JK-Bp-bl0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pe6-1N-kl4" secondAttribute="trailing" id="Xxg-Fq-PBE"/>
+                <constraint firstItem="Pe6-1N-kl4" firstAttribute="top" secondItem="VMd-oL-Ytf" secondAttribute="bottom" id="gpU-uq-phe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VMd-oL-Ytf" secondAttribute="trailing" id="hlS-xL-cqY"/>
+                <constraint firstItem="VMd-oL-Ytf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="iQy-WJ-YKf"/>
                 <constraint firstItem="Pe6-1N-kl4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jOF-G6-CyA"/>
-                <constraint firstItem="Pe6-1N-kl4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jWR-62-yTB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pe6-1N-kl4" secondAttribute="bottom" id="rAR-gH-3J4"/>
+                <constraint firstAttribute="bottom" secondItem="Pe6-1N-kl4" secondAttribute="bottom" id="rAR-gH-3J4"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

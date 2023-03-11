@@ -7,11 +7,14 @@ import Foundation
 enum MAStatType: String{
     case strike = "Striking"
     case takedowns = "Takedowns"
+    case strikesPerMin = "Strikes Per Minute"
+    case takedownsDefence = "Defence Takedowns"
+    case strikingDefence = "Defence Striking"
 }
-struct MAStasBase {
+struct MAStatsBase {
     enum EntityType {
         case record(String, String)
-        case circularGraph(Int, Int, MAStatType)
+        case circularGraph(Double, Double, MAStatType)
         case ThreeStatGraph(MAThreeStatGraph)
     }
     var name: String

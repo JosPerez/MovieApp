@@ -7,7 +7,7 @@
 import UIKit
 import BackServices
 final class MAThreeStatGraphCell: UITableViewCell {
-    let categoryColors: [UIColor] = [.blue,.green,.yellow]
+    let categoryColors: [UIColor] = [.blue,.orange,.militaryGreen]
     var parts:[Part] = []
     @IBOutlet private weak var titleLbl: UILabel!
     @IBOutlet private weak var firstCategoryLbl: UILabel!
@@ -18,25 +18,33 @@ final class MAThreeStatGraphCell: UITableViewCell {
     @IBOutlet private weak var thridCategoryView: UIView!
     @IBOutlet private weak var ringView: RingView!
     func setupCell(entity: MAThreeStatGraph) {
+        parts = []
         firstCategoryView.backgroundColor = categoryColors[0]
         secondCategoryView.backgroundColor = categoryColors[1]
         thridCategoryView.backgroundColor = categoryColors[2]
         titleLbl.text = entity.seccionTitle
-        firstCategoryLbl.text = getCategoryFullText(title: entity.title[0], percetange: entity.values[0].percentage, quantity: entity.values[0].quantity)
-        secondCategoryLbl.text = getCategoryFullText(title: entity.title[1], percetange: entity.values[1].percentage, quantity: entity.values[1].quantity)
-        ThridCategoryLbl.text = getCategoryFullText(title: entity.title[2], percetange: entity.values[2].percentage, quantity: entity.values[2].quantity)
+        firstCategoryLbl.attributedText = getCategoryFullText(title: entity.title[0], percetange: entity.values[0].percentage, quantity: entity.values[0].quantity)
+        secondCategoryLbl.attributedText = getCategoryFullText(title: entity.title[1], percetange: entity.values[1].percentage, quantity: entity.values[1].quantity)
+        ThridCategoryLbl.attributedText = getCategoryFullText(title: entity.title[2], percetange: entity.values[2].percentage, quantity: entity.values[2].quantity)
         for index in 0..<categoryColors.count {
             let part = Part(quantity: Double(entity.values[index].quantity) ?? 0.0, color: categoryColors[index], name: entity.title[index])
             parts.append(part)
         }
-        ringView.ringWidth = 14
+        ringView.ringWidth = 18
         ringView.dataSource = self
     }
-    func getCategoryFullText(title: String, percetange: String, quantity: String) -> String {
+    func getCategoryFullText(title: String, percetange: String, quantity: String) -> NSAttributedString {
         var per = percetange.replacingOccurrences(of: "(", with: "")
         per = per.replacingOccurrences(of: ")", with: "")
         per = per.replacingOccurrences(of: "%", with: "")
-        return "\(title): \(quantity) (\(per)%)"
+        return attributedStringWithBoldSecondString("\(title):","\(quantity) (\(per)%)")
+    }
+    private func attributedStringWithBoldSecondString(_ firstString: String, _ secondString: String) -> NSAttributedString {
+        let fullString = "\(firstString) \(secondString)"
+        let attributedString = NSMutableAttributedString(string: fullString)
+        let boldRange = (fullString as NSString).range(of: secondString)
+        attributedString.addAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)], range: boldRange)
+        return attributedString
     }
 }
 extension MAThreeStatGraphCell: RingViewDataSource {
