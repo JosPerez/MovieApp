@@ -8,7 +8,8 @@ import UIKit
 import BackServices
 final class MAFighterHomeVC: BaseController {
     @IBOutlet weak var segmentGender: UISegmentedControl!
-    var searchBar: UISearchBar?
+    private var searchBar: UISearchBar?
+    private var refreshControl: UIRefreshControl = UIRefreshControl()
     @IBOutlet private weak var fighterTableView: UITableView!
     var presenter: MAFighterHomePresenterProtocol?
     private var isFirstLoad:Bool = true
@@ -25,10 +26,15 @@ final class MAFighterHomeVC: BaseController {
         BSNetworkManager.shared.networkDelegate = self
         BSNetworkManager.shared.start()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        BSNetworkManager.shared.cancel()
+    }
     func setupTableView() {
         fighterTableView.delegate = self
         fighterTableView.dataSource = self
         fighterTableView.register(UINib(nibName: "MAFighterTableCell", bundle: Bundle.main), forCellReuseIdentifier: "MAFighterTableCell")
+        fighterTableView.separatorStyle = .none
         /// Create searchBar
         searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.fighterTableView.bounds.width, height: 48))
         searchBar?.placeholder = "Search Fighter"
@@ -39,6 +45,9 @@ final class MAFighterHomeVC: BaseController {
         searchBar?.autocapitalizationType = .words
         /// Se agrega a la vista header
         fighterTableView.tableHeaderView = searchBar
+        /// Se inicializa el refrsh control
+        refreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
+        fighterTableView.addSubview(refreshControl)
     }
     func setupSegementControl() {
         /// Segment Control general change
@@ -46,6 +55,13 @@ final class MAFighterHomeVC: BaseController {
         UISegmentedControl.appearance().setTitleTextAttributes(selectedTitleTextAttributes, for: .selected)
         /// Segement Control local change
         segmentGender.selectedSegmentTintColor = .purple
+    }
+    @objc func refreshTable() {
+        if segmentGender.selectedSegmentIndex == 0 {
+            presenter?.getFighters()
+        } else {
+            refreshControl.endRefreshing()
+        }
     }
 }
 extension MAFighterHomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -67,17 +83,21 @@ extension MAFighterHomeVC: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Search Bar Delegate
 extension MAFighterHomeVC: UISearchBarDelegate {
     fileprivate func searchBarSearch(_ searchText: String) {
-        
         let names = searchText.split(separator: " ")
-        var isLikeFirst = true
-        var isLikeLast = true
         if !names.isEmpty {
             self.currentSource = self.currentSource.filter({ entity in
-                isLikeFirst = entity.firstName.contains(names[0])
-                if names.count == 2 {
-                    isLikeLast = entity.lastName?.contains(names[1]) == true
+                var isLikeLast = false
+                if let lastName = entity.lastName {
+                    if names.count > 0 {
+                        isLikeLast = lastName.uppercased().contains(names[0].uppercased())
+                    }
+                    if names.count > 1 {
+                        let isLikeFirst = entity.firstName.uppercased().contains(names[1].uppercased())
+                        return isLikeLast && isLikeFirst
+                    }
+                    
                 }
-                return isLikeFirst && isLikeLast
+                return  isLikeLast
             })
         }
         fighterTableView.reloadData()
@@ -140,13 +160,17 @@ extension MAFighterHomeVC: MAFighterHomeViewProtocol {
             self.currentSource = entity
         }
         fighterTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    func fighterServiceFailed() {
+        refreshControl.endRefreshing()
     }
 }
 extension MAFighterHomeVC: BSNetworkManagerDelegate {
     func didNetworkChange(status: Bool) {
         print("Internet status:",status)
         DispatchQueue.main.async {
-            if self.isFirstLoad {
+            if self.isFirstLoad && status {
                 self.isFirstLoad = false
                 self.presenter?.getFighters()
             }

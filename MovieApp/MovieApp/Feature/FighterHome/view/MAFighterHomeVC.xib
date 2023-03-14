@@ -22,11 +22,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-1N-kl4">
-                    <rect key="frame" x="0.0" y="98" width="393" height="754"/>
+                    <rect key="frame" x="0.0" y="94" width="393" height="758"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-oL-Ytf">
-                    <rect key="frame" x="0.0" y="67" width="393" height="32"/>
+                    <rect key="frame" x="0.0" y="63" width="393" height="32"/>
                     <segments>
                         <segment title="ALL"/>
                         <segment title="MEN"/>
@@ -38,13 +38,13 @@
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="VMd-oL-Ytf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6JK-Bp-bl0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pe6-1N-kl4" secondAttribute="trailing" id="Xxg-Fq-PBE"/>
                 <constraint firstItem="Pe6-1N-kl4" firstAttribute="top" secondItem="VMd-oL-Ytf" secondAttribute="bottom" id="gpU-uq-phe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VMd-oL-Ytf" secondAttribute="trailing" id="hlS-xL-cqY"/>
-                <constraint firstItem="VMd-oL-Ytf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="iQy-WJ-YKf"/>
+                <constraint firstItem="VMd-oL-Ytf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="iQy-WJ-YKf"/>
                 <constraint firstItem="Pe6-1N-kl4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jOF-G6-CyA"/>
                 <constraint firstAttribute="bottom" secondItem="Pe6-1N-kl4" secondAttribute="bottom" id="rAR-gH-3J4"/>
             </constraints>
@@ -52,6 +52,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,7 +10,7 @@ final class MAFighterStatInteractor: MAFighterStatInputInteractorProtocol {
     var presenter: MAFighterStatOutputInteractorProtocol?
     var facade: BSFighterFacade
     public init() {
-        facade = BSFighterFacade(url: "http://127.0.0.1:5000/")
+        facade = BSFighterFacade(url: "https://1e6f-187-167-248-86.ngrok.io/")
         facade.delegate = self
     }
     func getFightsBy(id: Int) {

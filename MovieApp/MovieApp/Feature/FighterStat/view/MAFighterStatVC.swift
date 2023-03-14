@@ -25,6 +25,7 @@ final class MAFighterStatVC: BaseController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.title = ""
+        BSNetworkManager.shared.cancel()
     }
     func setupTableView() {
         self.fighterTableView.delegate = self

@@ -9,12 +9,16 @@ import BackServices
 protocol BaseControllerProtocol {
     func showToast(message : String, font: UIFont, isError: Bool)
     func showMainAlert(description: String, complation: (() -> Void)?)
+    func startLoading()
+    func stopLoading()
 }
 class BaseController: UIViewController {
     /// Placeholder de  conectividad
     let networkplacehoder: UIViewController = MANetworkPlaceholderVC()
+    var loader: MALoaderView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader = MALoaderView(frame: view.bounds)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -52,7 +56,22 @@ class BaseController: UIViewController {
             complation?()
         })))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    /// Empieza la animación de cargar
+    func startLoading() {
+        DispatchQueue.main.async {
+            self.loader?.startAnimating()
+        }
+    }
+    /// Empieza la animación de cargar
+    func stopLoading() {
+        DispatchQueue.main.async {
+            self.loader?.stopAnimating()
+        }
     }
 }
 /// Extensión con la información de red

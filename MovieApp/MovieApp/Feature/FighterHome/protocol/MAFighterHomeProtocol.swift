@@ -10,6 +10,7 @@ import BackServices
 protocol MAFighterHomeViewProtocol:BaseControllerProtocol {
     var presenter: MAFighterHomePresenterProtocol? { get set }
     func reloadFighterTable()
+    func fighterServiceFailed()
 }
 protocol MAFighterHomePresenterProtocol {
     var view: MAFighterHomeViewProtocol? { get set }

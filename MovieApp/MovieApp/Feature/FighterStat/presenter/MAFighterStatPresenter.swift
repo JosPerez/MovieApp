@@ -14,6 +14,7 @@ final class MAFighterStatPresenter: MAFighterStatPresenterProtocol {
     var dataSource: [MAStatsBase]?
     var history: BSFighterHistory?
     func getFightsBy(id: Int) {
+        self.view?.startLoading()
         interactor?.getFightsBy(id: id)
     }
     func showFights() {
@@ -77,10 +78,14 @@ final class MAFighterStatPresenter: MAFighterStatPresenterProtocol {
 }
 extension MAFighterStatPresenter: MAFighterStatOutputInteractorProtocol {
     func responseFightsSuccess(entity: BSFighterHistory) {
+        self.view?.stopLoading()
         self.history = entity
         self.view?.responseFightsSuccess()
     }
     func responseFightsFailed(message: String) {
-        self.view?.showToast(message: "No se encontro historial", font: UIFont.systemFont(ofSize: 18), isError: true)
+        self.view?.stopLoading()
+        DispatchQueue.main.async {
+            self.view?.showToast(message: "No se encontró historial", font: UIFont.systemFont(ofSize: 18), isError: true)
+        }
     }
 }

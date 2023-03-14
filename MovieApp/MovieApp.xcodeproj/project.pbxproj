@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 0710AD3E298B3AEB002E670D /* SDKConfig.json */; };
 		0710AD4429933238002E670D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710AD4329933238002E670D /* UIColorExtension.swift */; };
+		0731D7D529BE5FCA008D0FDF /* MALoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */; };
 		0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */; };
 		0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */; };
 		0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		0710AD3E298B3AEB002E670D /* SDKConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SDKConfig.json; sourceTree = "<group>"; };
 		0710AD4329933238002E670D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALoaderView.swift; sourceTree = "<group>"; };
 		0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGenderLayers.swift; sourceTree = "<group>"; };
 		0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAThreeStatGraphCell.swift; sourceTree = "<group>"; };
 		0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAThreeStatGraphCell.xib; sourceTree = "<group>"; };
@@ -623,6 +625,7 @@
 			children = (
 				07DFA12B27E021C200794952 /* MAImageDownloader.swift */,
 				0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */,
+				0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				0739FFED29BBFE7F00991E79 /* MAFighterHistoryEntity.swift in Sources */,
 				07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */,
 				07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */,
+				0731D7D529BE5FCA008D0FDF /* MALoaderView.swift in Sources */,
 				0739FFF829BC01C300991E79 /* MAFighterFightCell.swift in Sources */,
 				073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */,
 				073E5B8227CDE39400770B84 /* MAHomeVC.swift in Sources */,
