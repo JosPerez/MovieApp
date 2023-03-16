@@ -14,15 +14,14 @@ class MALoaderView: UIView {
         backgroundColor = UIColor.black.withAlphaComponent(0.5)
         layer.cornerRadius = 10
         isUserInteractionEnabled = false
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: 20, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: 30, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
         circleLayer.path = circlePath.cgPath
         circleLayer.fillColor = UIColor.purple.cgColor
         circleLayer.strokeColor = UIColor.white.cgColor
-        circleLayer.lineWidth = 3.0
+        circleLayer.lineWidth = 5.0
         circleLayer.strokeEnd = 0.0
         layer.addSublayer(circleLayer)
     }
-
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

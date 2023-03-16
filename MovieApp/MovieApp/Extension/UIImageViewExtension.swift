@@ -15,7 +15,6 @@ extension UIImageView {
         } else{
             self.backgroundColor = .gray
         }
-        print(url)
         MAImageDownloader.shared.downloadAndCacheImage(url: url, onSuccess: { (image, url) in
             DispatchQueue.main.async {
             if UIImageView.urlStore[tmpAddress] == url {

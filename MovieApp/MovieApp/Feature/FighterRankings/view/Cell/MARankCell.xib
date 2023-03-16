@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="h9m-f3-8Pc" customClass="MARankCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h9m-f3-8Pc" id="xtK-VA-RyW">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIV-J3-ces">
+                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="50"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fighter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-iN-oMy">
+                        <rect key="frame" x="78.666666666666657" y="0.0" width="314.33333333333337" height="50"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HIV-J3-ces" firstAttribute="top" secondItem="xtK-VA-RyW" secondAttribute="top" id="1pj-wW-pUE"/>
+                    <constraint firstItem="Y4V-iN-oMy" firstAttribute="leading" secondItem="HIV-J3-ces" secondAttribute="trailing" id="3SE-wV-TIx"/>
+                    <constraint firstItem="Y4V-iN-oMy" firstAttribute="top" secondItem="xtK-VA-RyW" secondAttribute="top" id="4lo-ZF-cmA"/>
+                    <constraint firstAttribute="trailing" secondItem="Y4V-iN-oMy" secondAttribute="trailing" id="FUG-Km-app"/>
+                    <constraint firstAttribute="bottom" secondItem="HIV-J3-ces" secondAttribute="bottom" id="ZPN-u8-qPZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Y4V-iN-oMy" secondAttribute="bottom" id="ei1-lb-XFF"/>
+                    <constraint firstItem="HIV-J3-ces" firstAttribute="leading" secondItem="xtK-VA-RyW" secondAttribute="leading" id="gpz-fX-zDc"/>
+                    <constraint firstItem="HIV-J3-ces" firstAttribute="width" secondItem="xtK-VA-RyW" secondAttribute="width" multiplier="0.2" id="s9S-G5-k1L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="name" destination="Y4V-iN-oMy" id="TkU-9e-ukO"/>
+                <outlet property="number" destination="HIV-J3-ces" id="Lxp-nl-gHu"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="20"/>
+        </tableViewCell>
+    </objects>
+</document>

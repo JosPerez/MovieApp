@@ -18,13 +18,14 @@ final class MAFighterHomeVC: BaseController {
         super.viewDidLoad()
         setupTableView()
         setupSegementControl()
+        BSNetworkManager.shared.networkDelegate = self
         self.navigationController?.setNavBarColor(.purple)
         self.title = "Fighter List"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        BSNetworkManager.shared.networkDelegate = self
         BSNetworkManager.shared.start()
+        tabBarController?.tabBar.isHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

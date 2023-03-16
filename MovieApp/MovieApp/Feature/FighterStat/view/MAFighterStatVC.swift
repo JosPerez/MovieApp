@@ -34,6 +34,7 @@ final class MAFighterStatVC: BaseController {
         self.fighterTableView.register(UINib(nibName: "MAStatCircularCell", bundle: Bundle.main), forCellReuseIdentifier: "MAStatCircularCell")
         self.fighterTableView.register(UINib(nibName: "MARecordCell", bundle: Bundle.main), forCellReuseIdentifier: "MARecordCell")
         self.fighterTableView.register(UINib(nibName: "MAThreeStatGraphCell", bundle: Bundle.main), forCellReuseIdentifier: "MAThreeStatGraphCell")
+        self.fighterTableView.register(UINib(nibName: "GraphTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "GraphTableViewCell")
     }
 
 }
@@ -48,6 +49,8 @@ extension MAFighterStatVC: UITableViewDelegate, UITableViewDataSource {
                 return 220.0
             case .ThreeStatGraph:
                 return 164.0
+            case .barStatCell:
+                return 300.0
             default:
                 return 160.0
             }
@@ -70,6 +73,12 @@ extension MAFighterStatVC: UITableViewDelegate, UITableViewDataSource {
             case .ThreeStatGraph(let entity):
                 if  let cell = fighterTableView.dequeueReusableCell(withIdentifier: "MAThreeStatGraphCell", for: indexPath) as? MAThreeStatGraphCell {
                     cell.setupCell(entity: entity)
+                    return cell
+                }
+            
+            case .barStatCell(let entity):
+                if  let cell = fighterTableView.dequeueReusableCell(withIdentifier: "GraphTableViewCell", for: indexPath) as? GraphTableViewCell {
+                    cell.setupCell(entity: entity.values)
                     return cell
                 }
             }

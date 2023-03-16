@@ -73,6 +73,15 @@ final class MAFighterStatPresenter: MAFighterStatPresenterProtocol {
             let tkdwnDefence = MAStatsBase(name: name, type: .circularGraph(defence, failed, .strikingDefence))
             dataSource?.append(tkdwnDefence)
         }
+//        if let entity = entity {
+//            if entity.winsByKo > 0 || entity.winsByFirstRoundFinished > 0 {
+//                let ko = MABarStat(name: "Wins by KO", quantity: Double(entity.winsByKo))
+//                let kofr = MABarStat(name: "Wins by KO", quantity: Double(entity.winsByKo))
+//                let barStat = MABarStatGraph(values: [ko,kofr])
+//                let wins = MAStatsBase(name: "Wins Types", type: .barStatCell(barStat))
+//                dataSource?.append(wins)
+//            }
+//        }
         self.view?.setupDataSourceSuccess()
     }
 }

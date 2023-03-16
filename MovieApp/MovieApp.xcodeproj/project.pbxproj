@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 0710AD3E298B3AEB002E670D /* SDKConfig.json */; };
 		0710AD4429933238002E670D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710AD4329933238002E670D /* UIColorExtension.swift */; };
 		0731D7D529BE5FCA008D0FDF /* MALoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */; };
+		0731D7DC29C0135F008D0FDF /* MABarStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731D7DB29C0135F008D0FDF /* MABarStatCell.swift */; };
+		0731D7DE29C02389008D0FDF /* GraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0731D7DD29C02389008D0FDF /* GraphTableViewCell.xib */; };
 		0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */; };
 		0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */; };
 		0739FFE029BACFE800991E79 /* MAThreeStatGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */; };
@@ -35,6 +36,17 @@
 		073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B8E27CDE74B00770B84 /* MAHomeRouter.swift */; };
 		073E5B9427CDF2D600770B84 /* MASplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073E5B9327CDF2D600770B84 /* MASplashScreen.xib */; };
 		073E5B9627CDF48B00770B84 /* MASplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073E5B9527CDF48B00770B84 /* MASplashScreen.swift */; };
+		074A767D29C2403400DC01C8 /* MAFighterRankingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A767429C2403400DC01C8 /* MAFighterRankingPresenter.swift */; };
+		074A767E29C2403400DC01C8 /* MAFighterRankingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A767629C2403400DC01C8 /* MAFighterRankingProtocol.swift */; };
+		074A767F29C2403400DC01C8 /* MAFighterRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A767829C2403400DC01C8 /* MAFighterRankingVC.swift */; };
+		074A768029C2403400DC01C8 /* MAFighterRankingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A767A29C2403400DC01C8 /* MAFighterRankingInteractor.swift */; };
+		074A768129C2403400DC01C8 /* MAFighterRankingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A767C29C2403400DC01C8 /* MAFighterRankingRouter.swift */; };
+		074A768329C2451100DC01C8 /* MAFighterRankingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074A768229C2451100DC01C8 /* MAFighterRankingsVC.xib */; };
+		074A768529C2468300DC01C8 /* MAURLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A768429C2468300DC01C8 /* MAURLService.swift */; };
+		074A768829C253FB00DC01C8 /* MAFighterRankingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A768729C253FB00DC01C8 /* MAFighterRankingEntity.swift */; };
+		074A768B29C2579300DC01C8 /* MARankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A768A29C2579300DC01C8 /* MARankCell.swift */; };
+		074A768D29C2579D00DC01C8 /* MARankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074A768C29C2579D00DC01C8 /* MARankCell.xib */; };
+		074A769229C25EAD00DC01C8 /* MACustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A769129C25EAD00DC01C8 /* MACustomHeaderView.swift */; };
 		07C1D1C428353C8000FA696B /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1D1C328353C8000FA696B /* MovieAppTests.swift */; };
 		07C7A63529B97C20005D46C2 /* MAFighterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C7A63429B97C20005D46C2 /* MAFighterHomeVC.swift */; };
 		07C7A63729B97C60005D46C2 /* MAFighterHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C7A63629B97C60005D46C2 /* MAFighterHomeVC.xib */; };
@@ -82,9 +94,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0710AD3E298B3AEB002E670D /* SDKConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SDKConfig.json; sourceTree = "<group>"; };
 		0710AD4329933238002E670D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALoaderView.swift; sourceTree = "<group>"; };
+		0731D7DB29C0135F008D0FDF /* MABarStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABarStatCell.swift; sourceTree = "<group>"; };
+		0731D7DD29C02389008D0FDF /* GraphTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphTableViewCell.xib; sourceTree = "<group>"; };
 		0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGenderLayers.swift; sourceTree = "<group>"; };
 		0739FFDD29BACFA500991E79 /* MAThreeStatGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAThreeStatGraphCell.swift; sourceTree = "<group>"; };
 		0739FFDF29BACFE800991E79 /* MAThreeStatGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAThreeStatGraphCell.xib; sourceTree = "<group>"; };
@@ -112,6 +125,17 @@
 		073E5B8E27CDE74B00770B84 /* MAHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAHomeRouter.swift; sourceTree = "<group>"; };
 		073E5B9327CDF2D600770B84 /* MASplashScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MASplashScreen.xib; sourceTree = "<group>"; };
 		073E5B9527CDF48B00770B84 /* MASplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASplashScreen.swift; sourceTree = "<group>"; };
+		074A767429C2403400DC01C8 /* MAFighterRankingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterRankingPresenter.swift; sourceTree = "<group>"; };
+		074A767629C2403400DC01C8 /* MAFighterRankingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterRankingProtocol.swift; sourceTree = "<group>"; };
+		074A767829C2403400DC01C8 /* MAFighterRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterRankingVC.swift; sourceTree = "<group>"; };
+		074A767A29C2403400DC01C8 /* MAFighterRankingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterRankingInteractor.swift; sourceTree = "<group>"; };
+		074A767C29C2403400DC01C8 /* MAFighterRankingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFighterRankingRouter.swift; sourceTree = "<group>"; };
+		074A768229C2451100DC01C8 /* MAFighterRankingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFighterRankingsVC.xib; sourceTree = "<group>"; };
+		074A768429C2468300DC01C8 /* MAURLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAURLService.swift; sourceTree = "<group>"; };
+		074A768729C253FB00DC01C8 /* MAFighterRankingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterRankingEntity.swift; sourceTree = "<group>"; };
+		074A768A29C2579300DC01C8 /* MARankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MARankCell.swift; sourceTree = "<group>"; };
+		074A768C29C2579D00DC01C8 /* MARankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MARankCell.xib; sourceTree = "<group>"; };
+		074A769129C25EAD00DC01C8 /* MACustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACustomHeaderView.swift; sourceTree = "<group>"; };
 		07C1D1C128353C8000FA696B /* MovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C1D1C328353C8000FA696B /* MovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppTests.swift; sourceTree = "<group>"; };
 		07C7A63429B97C20005D46C2 /* MAFighterHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFighterHomeVC.swift; sourceTree = "<group>"; };
@@ -177,6 +201,15 @@
 				BE42C368B0CB31C79DF16A0C /* Pods-MovieApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		0731D7DA29C01342008D0FDF /* BarStatCell */ = {
+			isa = PBXGroup;
+			children = (
+				0731D7DB29C0135F008D0FDF /* MABarStatCell.swift */,
+				0731D7DD29C02389008D0FDF /* GraphTableViewCell.xib */,
+			);
+			path = BarStatCell;
 			sourceTree = "<group>";
 		};
 		0739FFDC29BACDCA00991E79 /* ThreeStatCell */ = {
@@ -282,7 +315,6 @@
 				073E5B7027CDD59F00770B84 /* Delegates */,
 				073E5B6527CDD46F00770B84 /* Assets.xcassets */,
 				073E5B6A27CDD46F00770B84 /* Info.plist */,
-				0710AD3E298B3AEB002E670D /* SDKConfig.json */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -308,6 +340,7 @@
 		073E5B7227CDD5D300770B84 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				074A767229C2403400DC01C8 /* FighterRankings */,
 				0739FFE229BBFE7F00991E79 /* FighterHistory */,
 				07C7A64D29B9B5FF005D46C2 /* FighterStat */,
 				07C7A62C29B97B89005D46C2 /* FighterHome */,
@@ -429,6 +462,87 @@
 				073E5B9327CDF2D600770B84 /* MASplashScreen.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		074A767229C2403400DC01C8 /* FighterRankings */ = {
+			isa = PBXGroup;
+			children = (
+				074A768629C253E200DC01C8 /* entity */,
+				074A767329C2403400DC01C8 /* presenter */,
+				074A767529C2403400DC01C8 /* protocol */,
+				074A767729C2403400DC01C8 /* view */,
+				074A767929C2403400DC01C8 /* interactor */,
+				074A767B29C2403400DC01C8 /* router */,
+			);
+			path = FighterRankings;
+			sourceTree = "<group>";
+		};
+		074A767329C2403400DC01C8 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				074A767429C2403400DC01C8 /* MAFighterRankingPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		074A767529C2403400DC01C8 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				074A767629C2403400DC01C8 /* MAFighterRankingProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		074A767729C2403400DC01C8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				074A768929C2577500DC01C8 /* Cell */,
+				074A767829C2403400DC01C8 /* MAFighterRankingVC.swift */,
+				074A768229C2451100DC01C8 /* MAFighterRankingsVC.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		074A767929C2403400DC01C8 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				074A767A29C2403400DC01C8 /* MAFighterRankingInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		074A767B29C2403400DC01C8 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				074A767C29C2403400DC01C8 /* MAFighterRankingRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		074A768629C253E200DC01C8 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				074A768729C253FB00DC01C8 /* MAFighterRankingEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		074A768929C2577500DC01C8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				074A768E29C25E8400DC01C8 /* Header */,
+				074A768A29C2579300DC01C8 /* MARankCell.swift */,
+				074A768C29C2579D00DC01C8 /* MARankCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		074A768E29C25E8400DC01C8 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				074A769129C25EAD00DC01C8 /* MACustomHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		07C1D1C228353C8000FA696B /* MovieAppTests */ = {
@@ -576,6 +690,7 @@
 		07C7A66429B9C401005D46C2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0731D7DA29C01342008D0FDF /* BarStatCell */,
 				0739FFDC29BACDCA00991E79 /* ThreeStatCell */,
 				07C7A66929B9EF7A005D46C2 /* RecordCell */,
 				07C7A66529B9C47E005D46C2 /* MAStatCircularCell.swift */,
@@ -626,6 +741,7 @@
 				07DFA12B27E021C200794952 /* MAImageDownloader.swift */,
 				0739FFDA29BA6D2C00991E79 /* MAGenderLayers.swift */,
 				0731D7D429BE5FCA008D0FDF /* MALoaderView.swift */,
+				074A768429C2468300DC01C8 /* MAURLService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -790,6 +906,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074A768D29C2579D00DC01C8 /* MARankCell.xib in Resources */,
+				074A768329C2451100DC01C8 /* MAFighterRankingsVC.xib in Resources */,
 				0739FFF329BBFEAB00991E79 /* MAFighterHistoryVC.xib in Resources */,
 				07C7A66329B9B6FA005D46C2 /* MAFighterStatVC.xib in Resources */,
 				07C7A64929B990C2005D46C2 /* MAFighterTableCell.xib in Resources */,
@@ -802,8 +920,8 @@
 				07C7A66E29B9F01A005D46C2 /* MARecordCell.xib in Resources */,
 				07DFA13E27E10AE700794952 /* MATVShowDetailVC.xib in Resources */,
 				07C7A66829B9C544005D46C2 /* MAStatCircularCell.xib in Resources */,
+				0731D7DE29C02389008D0FDF /* GraphTableViewCell.xib in Resources */,
 				07C7A63729B97C60005D46C2 /* MAFighterHomeVC.xib in Resources */,
-				0710AD3F298B3AEB002E670D /* SDKConfig.json in Resources */,
 				073E5B7927CDD6F300770B84 /* MANetworkPlaceholderVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,6 +986,8 @@
 				0739FFDE29BACFA500991E79 /* MAThreeStatGraphCell.swift in Sources */,
 				07DFA14327E112AE00794952 /* MATVShowDetailProtocol.swift in Sources */,
 				07DFA14027E1129500794952 /* MATVShowDetailRouter.swift in Sources */,
+				074A768029C2403400DC01C8 /* MAFighterRankingInteractor.swift in Sources */,
+				074A769229C25EAD00DC01C8 /* MACustomHeaderView.swift in Sources */,
 				07DFA12C27E021C200794952 /* MAImageDownloader.swift in Sources */,
 				073E5B8527CDE56A00770B84 /* MAHomeProtocol.swift in Sources */,
 				07DFA13C27E10AA700794952 /* MATVShowDetailVC.swift in Sources */,
@@ -878,7 +998,9 @@
 				07C7A66129B9B5FF005D46C2 /* MAFighterStatRouter.swift in Sources */,
 				0739FFDB29BA6D2C00991E79 /* MAGenderLayers.swift in Sources */,
 				07C7A66629B9C47E005D46C2 /* MAStatCircularCell.swift in Sources */,
+				074A767F29C2403400DC01C8 /* MAFighterRankingVC.swift in Sources */,
 				07DFA12E27E025EC00794952 /* UINavigationControllerExtension.swift in Sources */,
+				0731D7DC29C0135F008D0FDF /* MABarStatCell.swift in Sources */,
 				073E5B5F27CDD46D00770B84 /* SceneDelegate.swift in Sources */,
 				07C7A66C29B9EFB1005D46C2 /* MARecordCell.swift in Sources */,
 				07DFA11F27E0092F00794952 /* MAHomeEntity.swift in Sources */,
@@ -888,8 +1010,11 @@
 				07C7A65B29B9B5FF005D46C2 /* MAFighterStatEntity.swift in Sources */,
 				07C7A63529B97C20005D46C2 /* MAFighterHomeVC.swift in Sources */,
 				0739FFF129BBFE7F00991E79 /* MAFighterHistoryRouter.swift in Sources */,
+				074A768829C253FB00DC01C8 /* MAFighterRankingEntity.swift in Sources */,
+				074A767D29C2403400DC01C8 /* MAFighterRankingPresenter.swift in Sources */,
 				073E5B7727CDD67600770B84 /* MANetworkPlaceholderVC.swift in Sources */,
 				0739FFED29BBFE7F00991E79 /* MAFighterHistoryEntity.swift in Sources */,
+				074A767E29C2403400DC01C8 /* MAFighterRankingProtocol.swift in Sources */,
 				07DFA13127E02E9100794952 /* MATabBarRouter.swift in Sources */,
 				07DFA14927E112D900794952 /* MATVShowDetailInteractor.swift in Sources */,
 				0731D7D529BE5FCA008D0FDF /* MALoaderView.swift in Sources */,
@@ -897,12 +1022,15 @@
 				073E5B8F27CDE74B00770B84 /* MAHomeRouter.swift in Sources */,
 				073E5B8227CDE39400770B84 /* MAHomeVC.swift in Sources */,
 				07DFA12227E00C0E00794952 /* MATVShowCell.swift in Sources */,
+				074A768129C2403400DC01C8 /* MAFighterRankingRouter.swift in Sources */,
 				0710AD4429933238002E670D /* UIColorExtension.swift in Sources */,
 				07C7A63F29B97EFC005D46C2 /* MAFighterHomeRouter.swift in Sources */,
 				07C7A66029B9B5FF005D46C2 /* MAFighterStatInteractor.swift in Sources */,
 				0739FFF029BBFE7F00991E79 /* MAFighterHistoryVC.swift in Sources */,
+				074A768529C2468300DC01C8 /* MAURLService.swift in Sources */,
 				07DFA12927E0166600794952 /* UIImageViewExtension.swift in Sources */,
 				07C7A63D29B97E9C005D46C2 /* MAFighterHomeInterctor.swift in Sources */,
+				074A768B29C2579300DC01C8 /* MARankCell.swift in Sources */,
 				0739FFEF29BBFE7F00991E79 /* MAFighterHistoryProtocol.swift in Sources */,
 				07C7A63B29B97E16005D46C2 /* MAFighterHomePresenter.swift in Sources */,
 				07C7A65F29B9B5FF005D46C2 /* MAFighterStatVC.swift in Sources */,

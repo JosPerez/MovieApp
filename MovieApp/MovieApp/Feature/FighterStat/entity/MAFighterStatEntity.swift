@@ -16,6 +16,7 @@ struct MAStatsBase {
         case record(String, String)
         case circularGraph(Double, Double, MAStatType)
         case ThreeStatGraph(MAThreeStatGraph)
+        case barStatCell(MABarStatGraph)
     }
     var name: String
     var type: EntityType
@@ -28,4 +29,11 @@ struct MAThreeStatGraph {
 struct MADetailStat {
     var percentage: String
     var quantity: String
+}
+struct MABarStatGraph {
+    var values: [MABarStat]
+}
+struct MABarStat {
+    var name: String
+    var quantity: Double
 }
